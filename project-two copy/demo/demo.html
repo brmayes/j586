@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Poshy Tip jQuery Plugin Demo Page</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1" />
+
+
+	<!-- Tooltip classes -->
+	<link rel="stylesheet" href="../src/tip-yellow/tip-yellow.css" type="text/css" />
+	<link rel="stylesheet" href="../src/tip-violet/tip-violet.css" type="text/css" />
+	<link rel="stylesheet" href="../src/tip-darkgray/tip-darkgray.css" type="text/css" />
+	<link rel="stylesheet" href="../src/tip-skyblue/tip-skyblue.css" type="text/css" />
+	<link rel="stylesheet" href="../src/tip-yellowsimple/tip-yellowsimple.css" type="text/css" />
+	<link rel="stylesheet" href="../src/tip-twitter/tip-twitter.css" type="text/css" />
+	<link rel="stylesheet" href="../src/tip-green/tip-green.css" type="text/css" />
+	<link rel="stylesheet" href="../src/tooltip.css" type="text/css" />
+
+	<!-- jQuery and the Poshy Tip plugin files -->
+	<script type="text/javascript" src="includes/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="../src/jquery.poshytip.js"></script>
+	<script type="text/javascript" src="../src/jquery.poshytip.style.js"></script>
+
+
+</head>
+
+<body>
+
+	<div id="holder">
+
+
+		<div id="content">
+			<!-- #demo-basic -->
+			<p><a id="demo-basic" title="Hey, there! This is a tooltip." href="#">Hover for a tooltip</a></p>
+			<div class="code-block">
+			<pre class="sh_javascript">$('#demo-basic').poshytip();</pre>
+			</div>
+
+			<h3 id="styles">Styles (Classes)</h3>
+
+			<p>Using different tooltip classes is easy. Here are some examples that are included in the download package (in the "src" folder).</p>
+
+			<!-- #demo-tip-yellow -->
+			<p><a id="demo-tip-yellow" title="Hey, there! This is a tooltip." href="#">.tip-yellow</a></p>
+			<div class="code-block">
+			<pre class="sh_javascript">$('#demo-tip-yellow').poshytip();</pre>
+			</div>
+
+			<!-- #demo-tip-violet -->
+			<p><a id="demo-tip-violet" title="Hey, there! This is a tooltip." href="#">.tip-violet</a></p>
+			<div class="code-block">
+			<pre class="sh_javascript">$('#demo-tip-violet').poshytip({
+				className: 'tip-violet',
+				bgImageFrameSize: 9
+			});</pre>
+			</div>
+
+			<!-- #demo-tip-darkgray -->
+			<p><a id="demo-tip-darkgray" title="Hey, there! This is a tooltip." href="#">.tip-darkgray</a></p>
+			<div class="code-block">
+			<pre class="sh_javascript">$('#demo-tip-darkgray').poshytip({
+				className: 'tip-darkgray',
+				bgImageFrameSize: 11,
+				offsetX: -25
+			});</pre>
+			</div>
+
+			<!-- #demo-tip-skyblue -->
+			<p><a id="demo-tip-skyblue" title="Hey, there! This is a tooltip." href="#">.tip-skyblue</a></p>
+			<div class="code-block">
+			<pre class="sh_javascript">$('#demo-tip-skyblue').poshytip({
+				className: 'tip-skyblue',
+				bgImageFrameSize: 9,
+				offsetX: 0,
+				offsetY: 20
+			});</pre>
+			</div>
+
+			<!-- #demo-tip-yellowsquare -->
+			<p><a id="demo-tip-yellowsimple" title="Hey, there! This is a tooltip." href="#">.tip-yellowsimple</a> (no background-image used for the tooltip body)</p>
+			<div class="code-block">
+			<pre class="sh_javascript">$('#demo-tip-yellowsimple').poshytip({
+				className: 'tip-yellowsimple',
+				showTimeout: 1,
+				alignTo: 'target',
+				alignX: 'center',
+				offsetY: 5,
+				allowTipHover: false
+			});</pre>
+			</div>
+
+			<!-- #demo-tip-twitter -->
+			<p><a id="demo-tip-twitter" title="Follow vadikom" href="#">.tip-twitter</a> (ala Twitter)</p>
+			<div class="code-block">
+			<pre class="sh_javascript">$('#demo-tip-twitter').poshytip({
+				className: 'tip-twitter',
+				showTimeout: 1,
+				alignTo: 'target',
+				alignX: 'center',
+				offsetY: 5,
+				allowTipHover: false,
+				fade: false,
+				slide: false
+			});</pre>
+			</div>
+
+			<!-- #demo-tip-green -->
+			<p><a id="demo-tip-green" title="Hey, there! This is a tooltip." href="#">.tip-green</a></p>
+			<div class="code-block">
+			<pre class="sh_javascript">$('#demo-tip-green').poshytip({
+				className: 'tip-green',
+				offsetX: -7,
+				offsetY: 16,
+				allowTipHover: false
+			});</pre>
+			
+			
+			
+			</div>
+
+		</div>
+
+	</div>
+
+</body>
+</html>
