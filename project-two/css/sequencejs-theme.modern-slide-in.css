@@ -44,7 +44,7 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol, ul, li {
   list-style: none;
 }
 
@@ -157,7 +157,7 @@ table {
 .sequence-pagination {
   bottom: 1%;
   display: none;
-  right: 6%;
+  right: 4%;
   position: absolute;
   z-index: 10;
   -webkit-transition-duration: 0.5s;
@@ -361,6 +361,12 @@ h3 {
     min-width: 40%;
     /*prevents the model from shrinking when the browser is resized*/
     width: 40%;
+  }
+  #sequence .model-quiz {
+    left: 40% !important;
+    min-width: 60%;
+    /*prevents the model from shrinking when the browser is resized*/
+    width: 60%;
   }
   #sequence .animate-in .model {
     left: 50%;
