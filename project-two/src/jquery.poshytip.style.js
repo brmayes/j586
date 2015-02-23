@@ -4,10 +4,68 @@
 
 			$('#demo-basic').poshytip();
 			$('#demo-tip-yellow').poshytip();
-			$('#demo-tip-violet').poshytip({
+			$('#tip-violet-s1').poshytip({
 				className: 'tip-violet',
 				bgImageFrameSize: 9
 			});
+			$('#tip-violet-s2').poshytip({
+				className: 'tip-violet',
+				bgImageFrameSize: 9
+			});
+			$('#tip-violet-s3').poshytip({
+				className: 'tip-violet',
+				bgImageFrameSize: 9
+			});
+			$('#tip-violet-s4').poshytip({
+				className: 'tip-violet',
+				bgImageFrameSize: 9
+			});
+			$('#tip-violet-s5').poshytip({
+				className: 'tip-violet',
+				bgImageFrameSize: 9
+			});
+			$('#tip-violet-s6').poshytip({
+				className: 'tip-violet',
+				bgImageFrameSize: 9
+			});
+			$('#tip-violet-s7').poshytip({
+				className: 'tip-violet',
+				bgImageFrameSize: 9
+			});
+			$('#tip-violet-s8').poshytip({
+				className: 'tip-violet',
+				bgImageFrameSize: 9
+			});
+			$('#tip-violet-s9').poshytip({
+				className: 'tip-violet',
+				bgImageFrameSize: 9
+			});
+			$('#tip-violet-s10').poshytip({
+				className: 'tip-violet',
+				bgImageFrameSize: 9
+			});
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 			$('#demo-tip-darkgray').poshytip({
 				className: 'tip-darkgray',
 				bgImageFrameSize: 11,

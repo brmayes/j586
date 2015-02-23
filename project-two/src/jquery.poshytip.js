@@ -493,9 +493,9 @@
 		offsetY:		18,		// offset Y pixels from the default position - doesn't matter if alignY:'center'
 		keepInViewport:		true,		// reposition the tooltip if needed to make sure it always appears inside the viewport
 		allowTipHover:		true,		// allow hovering the tip without hiding it onmouseout of the target - matters only if showOn:'hover'
-		followCursor:		false,		// if the tip should follow the cursor - matters only if showOn:'hover' and alignTo:'cursor'
+		followCursor:		true,		// if the tip should follow the cursor - matters only if showOn:'hover' and alignTo:'cursor'
 		fade: 			true,		// use fade animation
-		slide: 			true,		// use slide animation
+		slide: 			false,		// use slide animation
 		slideOffset: 		8,		// slide animation offset
 		showAniDuration: 	300,		// show animation duration - set to 0 if you don't want show animation
 		hideAniDuration: 	300,		// hide animation duration - set to 0 if you don't want hide animation

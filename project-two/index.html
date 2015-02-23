@@ -22,6 +22,7 @@
     <script type="text/javascript" src="scripts/jquery.aw-showcase.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <link href="css/tooltip.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet" />
     
     <!--QUIZ FILES-->
@@ -48,8 +49,8 @@
     
     <div class="sequence-theme">
       <div id="sequence">
-        <img class="sequence-prev" src="images/arrow_left.png" alt="Previous Frame" />
-        <img class="sequence-next" src="images/arrow_right.png" alt="Next Frame" />
+        <img class="sequence-prev" src="images/arrows-simple-back.png" alt="Previous Frame" />
+        <img class="sequence-next" src="images/arrows-simple-next.png" alt="Next Frame" />
         
       <ul class="sequence-canvas">
         <li class="animate-in">
@@ -60,9 +61,16 @@
           <h2 class="title">Step One</h2>
           <h3 class="subtitle">Begin standing straight up with your hands by your side.</h3>
           <img class="model" src="images/tuck/tuck-step-01.png" alt="Step 1" />
-            <div class="step-one">
-              <a id="demo-tip-yellow" title="Hey, there! This is a tooltip." href="#">
-                <img  src="images/tooltip-lgcircle.png" alt="circle" />
+            <!--tooltip-->
+            <div class="model step-one-div-lg step-one hidden-sm hidden-xs">
+              <a id="tip-violet-s1" title="Tumbling takes a lot of conditioning to be able
+              to master the skills. Before you tumble, you should make sure you have strong core muscles." href="#">
+                <img class="step-one-lg" src="images/circle-simple.png" alt="circle" />
+              </a>
+            </div>
+            <div class="model step-one-div-sm step-one hidden-md hidden-lg">
+              <a id="tip-violet-s2" title="Tumbling takes a lot of conditioning to be able to master the skills. Before you tumble, you should make sure you have strong core muscles." href="#">
+                <img class="step-one-sm" src="images/circle-simple.png" alt="circle" />
               </a>
             </div>
         </li>
@@ -70,6 +78,18 @@
           <h2 class="title">Step Two</h2>
           <h3 class="subtitle">Begin standing straight up with your hands by your side.</h3>
           <img class="model" src="images/tuck/tuck-step-02.png" alt="Step 2" />
+            <!--tooltip-->
+            <div class="model step-two-div-lg step-one hidden-sm hidden-xs">
+              <a id="demo-tip-violet" title="Tumbling takes a lot of conditioning to be able
+              to master the skills. Before you tumble, you should make sure you have strong core muscles." href="#">
+                <img class="step-two-lg" src="images/circle-simple.png" alt="circle" />
+              </a>
+            </div>
+            <div class="model step-two-div-sm step-one hidden-md hidden-lg">
+              <a id="demo-tip-yellowsimple" title="Tumbling takes a lot of conditioning to be able to master the skills. Before you tumble, you should make sure you have strong core muscles." href="#">
+                <img class="step-two-sm" src="images/circle-simple.png" alt="circle" />
+              </a>
+            </div>
         </li>
         <li>
           <h2 class="title">Step Three</h2>
@@ -119,9 +139,9 @@
               marginheight='0px' marginwidth='0px' height='265px' width='565px'>
               </iframe>
             </div>
-            <div class="embed-container model hidden-sm hidden-md hidden-lg">
+            <div class="embed-container model model-quiz hidden-sm hidden-md hidden-lg">
               <iframe src='http://brmayes.com/static/j586/project-two/quiz.html'
-              style='border:0px #FFFFFF none;' name='myiFrame' scrolling='yes' frameborder='0'
+              style='max-height: 600px !important;' name='myiFrame' scrolling='yes' frameborder='0'
               marginheight='0px' marginwidth='0px' height='265px' width='565px'>
               </iframe>
             </div>
@@ -148,13 +168,6 @@
       </div>
     </div>
     
-    
-    <!--<div class='embed-container'>
-      <iframe src='http://brmayes.com/static/j586/project-two/quiz.html'
-      style='border:0px #FFFFFF none;' name='myiFrame' scrolling='yes' frameborder='0'
-      marginheight='0px' marginwidth='0px' height='265px' width='565px'>
-      </iframe>
-    </div>-->
     
   </body>
 </html>

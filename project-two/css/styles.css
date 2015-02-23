@@ -1,13 +1,4 @@
 /* specific styles for bootstrap demo */
-
-.step-one {
-    background-color: black;
-    width: 30px;
-    border-radius: 50%;
-    position: absolute;
-    border: 1px solid black;
-}
-
 .max-quiz-container {
     max-height: 565px;
     max-width: 265px;
@@ -45,3 +36,50 @@ ul {
 li {
     list-style-type: none;
 }
+
+
+
+
+
+/*TOOLTIP STYLING
+
+.step-one-div-lg {
+    border: 1px solid red;
+    height: 20px !important;
+    position: absolute !important;
+    top: 100%;
+    margin: 0 auto;
+}
+.step-one-lg {
+    width: 15px;
+    height: auto !important;
+    position: absolute;
+    margin-left: 42%;
+}
+
+
+.step-one-div-sm {
+    border: 1px solid blue; 
+    height: 20px !important;
+    position: absolute !important;
+    top: 100%;
+    margin: 0 auto;
+}
+.step-one-sm {
+    width: 15px;
+    height: auto !important;
+    position: absolute;
+    margin-left: 42%;
+}
+
+*/
+
+
+
+
+
+
+
+
+
+

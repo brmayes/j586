@@ -367,6 +367,7 @@ h3 {
     min-width: 60%;
     /*prevents the model from shrinking when the browser is resized*/
     width: 60%;
+    top: 70%;
   }
   #sequence .animate-in .model {
     left: 50%;
@@ -435,6 +436,10 @@ h3 {
     height: 320px;
   }
   #sequence .model {
+    min-width: 45%;
+    width: 45%;
+  }
+  #sequence .model-quiz {
     min-width: 45%;
     width: 45%;
   }
