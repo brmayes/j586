@@ -44,8 +44,15 @@ li {
     text-transform: lowercase;
 }
 
+.citation {
+    color: gray !important;
+    padding: 0 0 0 5px;
+}
 
-
+a {
+    text-decoration: none !important;
+    color: gray !important;
+}
 
 
 
