@@ -37,7 +37,12 @@ li {
     list-style-type: none;
 }
 
-
+.small-instructions {
+    font-size: .8em;
+    color: white;
+    font: inherit; 
+    text-transform: lowercase;
+}
 
 
 

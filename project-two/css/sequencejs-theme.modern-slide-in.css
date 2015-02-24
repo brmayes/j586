@@ -343,7 +343,8 @@ h3 {
     font-size: 2.8em;
   }
   #sequence .subtitle {
-    font-size: 1.6em;
+    font-size: 1.6em; 
+    
   }
   #sequence .sequence-next,
   #sequence .sequence-prev {
@@ -353,6 +354,10 @@ h3 {
   #sequence .model {
     max-height: 480px !important;
     width: auto;
+  }
+
+  #sequence .small-instructions {
+    visibility: hidden;
   }
 }
 @media only screen and (max-width: 568px) {
@@ -401,6 +406,10 @@ h3 {
   }
   #sequence .sequence-pagination li img {
     height: 100px;
+  }
+
+  #sequence .small-instructions {
+    visibility: visible;
   }
 }
 @media only screen and (max-width: 518px) {

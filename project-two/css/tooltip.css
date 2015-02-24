@@ -34,7 +34,7 @@
 
 /*step two*/
 .step-two-div-lg {
-    border: 1px solid red;
+    
     height: 20px !important;
     position: absolute !important;
     top: 93%;
@@ -48,17 +48,17 @@
 }
 
 .step-two-div-sm {
-    border: 1px solid blue; 
+     
     height: 20px !important;
     position: absolute !important;
-    top: 93%;
+    top: 96%;
     margin: 0 auto;
 }
 .step-two-sm {
     width: 15px;
     height: auto !important;
     position: absolute;
-    margin-left: 42%;
+    margin-left: 38%;
 }
 
 
