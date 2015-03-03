@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Load XML With jQuery</title>
+    <script src="jquery-1.2.6.js" type="text/javascript"></script>
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript">
+        
+        $(document).ready(function(){
+            $.get('myData.xml', function(d){
+            $('body').append('<h1>Top Journalists</h1>');
+            $('body').append('<dl />'); //dl = data list
+            
+            console.log(d);
+            
+            $(d).find('person').each(function(){
+                console.log("once for every person");
+                
+                var $person = $(this);
+                var name = $person.attr("name"); //this pulls out the ATTRIBUTE "name" from the file
+                var description = $person.find("description").text(); //adding .text() is a function of jQuery that takes out the text and not all of the NODE.
+                var imageurl = $person.attr("imageurl");
+                
+                
+                var html = '<dt><img class="bioImage" alt="" src="' + imageurl + '"/>'; //this is the html being printed for every person dt=data table
+                html += '<dd> <span class="loadingPic" alt="loading" />';
+                html += '<p class="name">' + name + '</p>';
+                html += '<p class="description">' + description + '</p>';
+                html += '</dd>'
+                
+                $('dl').append(html); //writes the html to the page
+                
+                $('.loadingPic').fadeOut(1400);
+            });
+            
+            });
+        });
+    
+    </script>
+
+</head>
+<body>
+</body>
+</html>
