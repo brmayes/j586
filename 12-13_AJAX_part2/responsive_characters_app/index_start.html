@@ -64,6 +64,7 @@
           <ul id="list"></ul>
         </div>
         <div class="col-md-9">
+	  <div id="image-thumbs"></div>
           <div id="person"></div>
         </div>
       </div>
@@ -101,23 +102,35 @@
 	$("#message").text("data loaded");
 	console.log(data);
 	
+	var htmlTop = "";
 	var htmlBottom = "";
 	var htmlList = "";
 	
 	$(data).find("person").each(function(index) {
 	  
+	  var lastName = $(this).attr("last");
+	  var photoThumb = $(this).find("photo").text();
+	  var fullName = $(this).attr("name");
+	  var location = $(this).find("location").text();
+	  var occupation = $(this).find("occupation").text();
+	  var role = $(this).find("role").text();
+	  
+	  //Builds top image links
+	  htmlTop += '<a href="#' + lastName + '"><img src= "' + photoThumb + '" "width="100" height="100" alt="portrait"></a>';
+	  
+	  
 	  //Builds sidebar list
-	  htmlList += '<li><a href="#' + $(this).attr("last") + '">'  + $(this).attr("name") + '</a></li>';
+	  htmlList += '<li><a href="#' + lastName + '">'  + fullName + '</a></li>';
 	  
 	  
-	  
-	  htmlBottom += '<div><img class="floatRight" src= "' + $(this).find("photo").text() + '" "width="100" height="100" alt="portrait">'
+	  //Builds people profiles
+	  htmlBottom += '<div><img class="floatRight" src= "' + photoThumb + '" "width="100" height="100" alt="portrait">';
 	  htmlBottom += '<ul class="characters"><li>';
-	  htmlBottom += '<h3 id=' + $(this).attr("last") + '>' + $(this).attr("name") + '</h3></li>';
-	  htmlBottom += '<ul class="subcharacters"><li><strong>Location:</strong> ' + $(this).find("location").text() + '</li>';
-	  htmlBottom += '<li><strong>Occupation:</strong> ' + $(this).find("occupation").text() + '</li>';
-	  htmlBottom += '<li><strong>Role:</strong> ' +$(this).find("role").text() + '</li>';
-	  htmlBottom += '<a href="#top"><p>Return to top</p></a>'
+	  htmlBottom += '<h3 id=' + lastName + '>' + fullName + '</h3></li>';
+	  htmlBottom += '<ul class="subcharacters"><li><strong>Location:</strong> ' + location + '</li>';
+	  htmlBottom += '<li><strong>Occupation:</strong> ' + occupation + '</li>';
+	  htmlBottom += '<li><strong>Role:</strong> ' + role + '</li>';
+	  htmlBottom += '<a href="#top"><p>Return to top</p></a>';
 	  htmlBottom += '</ul>';
 	  htmlBottom += '</ul>';
 	  
@@ -125,6 +138,7 @@
 	
 	})
 	console.log(htmlBottom);
+	$("#image-thumbs").append(htmlTop);
 	$("#list").append(htmlList);
 	$("#person").append(htmlBottom); 
 	
