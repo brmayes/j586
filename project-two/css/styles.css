@@ -38,50 +38,21 @@ li {
 }
 
 .small-instructions {
-    font-size: .8em;
+    font-size: .5em !important;
     color: white;
     font: inherit; 
     text-transform: lowercase;
 }
 
-
-
-/*TOOLTIP STYLING
-
-.step-one-div-lg {
-    border: 1px solid red;
-    height: 20px !important;
-    position: absolute !important;
-    top: 100%;
-    margin: 0 auto;
-}
-.step-one-lg {
-    width: 15px;
-    height: auto !important;
-    position: absolute;
-    margin-left: 42%;
+.citation {
+    color: gray !important;
+    padding: 0 0 0 5px;
 }
 
-
-.step-one-div-sm {
-    border: 1px solid blue; 
-    height: 20px !important;
-    position: absolute !important;
-    top: 100%;
-    margin: 0 auto;
+a {
+    text-decoration: none !important;
+    color: gray !important;
 }
-.step-one-sm {
-    width: 15px;
-    height: auto !important;
-    position: absolute;
-    margin-left: 42%;
-}
-
-*/
-
-
-
-
 
 
 

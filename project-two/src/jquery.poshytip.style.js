@@ -44,7 +44,46 @@
 				className: 'tip-violet',
 				bgImageFrameSize: 9
 			});
-			
+			$('#tip-violet-s11').poshytip({
+				className: 'tip-violet',
+				bgImageFrameSize: 9
+			});
+			$('#tip-violet-s12').poshytip({
+				className: 'tip-violet',
+				bgImageFrameSize: 9
+			});
+			$('#tip-violet-s13').poshytip({
+				className: 'tip-violet',
+				bgImageFrameSize: 9
+			});
+			$('#tip-violet-s14').poshytip({
+				className: 'tip-violet',
+				bgImageFrameSize: 9
+			});
+			$('#tip-violet-s15').poshytip({
+				className: 'tip-violet',
+				bgImageFrameSize: 9
+			});
+			$('#tip-violet-s16').poshytip({
+				className: 'tip-violet',
+				bgImageFrameSize: 9
+			});
+			$('#tip-violet-s17').poshytip({
+				className: 'tip-violet',
+				bgImageFrameSize: 9
+			});
+			$('#tip-violet-s18').poshytip({
+				className: 'tip-violet',
+				bgImageFrameSize: 9
+			});
+			$('#tip-violet-s19').poshytip({
+				className: 'tip-violet',
+				bgImageFrameSize: 9
+			});
+			$('#tip-violet-s20').poshytip({
+				className: 'tip-violet',
+				bgImageFrameSize: 9
+			});
 			
 			
 			
