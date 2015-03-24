@@ -1,0 +1,5 @@
+information about data set:
+http://catalog.data.gov/dataset/characteristics-of-new-housing 
+http://www.census.gov/construction/chars/pdf/c25ann2013.pdf 
+http://www.census.gov/construction/chars/
+
