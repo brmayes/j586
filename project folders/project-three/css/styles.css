@@ -1,4 +1,8 @@
 /* General */
 h1 {
-  color: red;
+  font-family: 'Interstate-BlackCondensed';
+}
+
+h2 {
+  font-family: 'Interstate';
 }
