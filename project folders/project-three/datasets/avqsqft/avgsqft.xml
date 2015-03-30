@@ -3,12 +3,12 @@
 <avgsqft>
 
     <Row name="1973">
-    <Year>1973</Year>
-    <UnitedStates>1660</UnitedStates>
-    <Northeast>1595</Northeast>
-    <Midwest>1615</Midwest>
-    <South>1670</South>
-    <West>1715</West>
+        <Year>1973</Year>
+        <UnitedStates>1660</UnitedStates>
+        <Northeast>1595</Northeast>
+        <Midwest>1615</Midwest>
+        <South>1670</South>
+        <West>1715</West>
     </Row>
     
     <Row name="1974">
