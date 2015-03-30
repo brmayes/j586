@@ -1,8 +1,68 @@
 /* General */
-h1 {
-  font-family: 'Interstate-BlackCondensed';
+h1, h2, h3 {
+  font-family: Oswald;
 }
 
-h2 {
-  font-family: 'Interstate';
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+}
+
+.temp {
+  border: 1px black solid;
+  height: 40px;
+  padding: 10px 0 0 5px;
+}
+
+.oswald {
+  font-family: 'Oswald', sans-serif;
+}
+
+.oswald-bold {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+}
+
+.light-gray {
+  color: lightgray;
+}
+
+.inline {
+  display: inline;
+}
+
+.txta-left {
+  text-align: left;
+}
+
+.txta-right {
+  text-align: right;
+}
+
+.txta-center {
+  text-align: center;
+}
+
+/*NAVIGAVTION*/
+.subscribe {
+  background-color: black;
+  color: white;
+  padding: 10px 0 0 2px;
+}
+
+.temp a {
+    color: #444444;
+}
+
+.temp a:visited {
+    color: #444444;
+}
+
+.temp a:hover {
+    color: #FF6839;
+    text-decoration: none;
+}
+
+.temp a:active {
+    color: #0000FF;
 }

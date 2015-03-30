@@ -1,11 +1,12 @@
 $(function () {
     
     Highcharts.setOptions({
-	colors: ['#c8e6e6']
+	//colors: ['#c8e6e6']
     });
     
     
     $('#soldpricerange-pie2003').highcharts({
+	//colors: ['#00000;'],
         chart: {
             plotBackgroundColor: null,
             plotBorderWidth: null,
@@ -22,12 +23,13 @@ $(function () {
                 allowPointSelect: true,
                 cursor: 'pointer',
                 dataLabels: {
-                    enabled: true,
+                    enabled: false,
                     format: '<b>{point.name}</b>: {point.percentage:.1f} %',
                     style: {
                         color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
                     }
-                }
+                },
+		showInLegend: true
             }
         },
         series: [{
@@ -66,12 +68,13 @@ $(function () {
                 allowPointSelect: true,
                 cursor: 'pointer',
                 dataLabels: {
-                    enabled: true,
+                    enabled: false,
                     format: '<b>{point.name}</b>: {point.percentage:.1f} %',
                     style: {
                         color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
                     }
-                }
+                },
+		showInLegend: true
             }
         },
         series: [{
@@ -94,7 +97,7 @@ $(function () {
     
     
     $('#soldpricerange-pie2013').highcharts({
-        chart: {
+	chart: {
             plotBackgroundColor: null,
             plotBorderWidth: null,
             plotShadow: false
@@ -111,12 +114,13 @@ $(function () {
                 allowPointSelect: true,
                 cursor: 'pointer',
                 dataLabels: {
-                    enabled: true,
+                    enabled: false,
                     format: '<b>{point.name}</b>: {point.percentage:.1f} %',
                     style: {
                         color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
                     }
-                }
+                },
+		showInLegend: true
             },
 	    point: {
                     events: {
