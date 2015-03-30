@@ -1,4 +1,10 @@
 $(function () {
+    
+    Highcharts.setOptions({
+	colors: ['#c8e6e6']
+    });
+    
+    
     $('#soldpricerange-pie2003').highcharts({
         chart: {
             plotBackgroundColor: null,
@@ -98,6 +104,7 @@ $(function () {
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+	    
         },
         plotOptions: {
             pie: {
@@ -110,7 +117,22 @@ $(function () {
                         color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
                     }
                 }
-            }
+            },
+	    point: {
+                    events: {
+                        /*click: function(event) {
+                            console.log(this);
+                            if (previousPoint) {
+                                previousPoint.update({ color: '#7cb5ec' });
+                            }
+                            previousPoint = this;
+                            this.update({ color: '#fe5800' });
+                            }*/
+			    click: function(event) {
+                            console.log(this);
+                            this.update({ color: '#fe5800' }, true, false); }
+                    }
+                }
         },
         series: [{
             type: 'pie',
