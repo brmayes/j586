@@ -47,11 +47,11 @@ $(document).ready(function() { //runs the function
             text: 'Square feet'
             }
         },
-				plotOptions: {
-				    marker: {
+	plotOptions: {
+	    marker: {
                     enabled: false
                 }
-				},
+	    },
         series: [{
             name: 'United States',
             data: unitedStates

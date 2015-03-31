@@ -12,12 +12,12 @@
     </Row>
     
     <Row name="1974">
-    <Year>1974</Year>
-    <UnitedStates>1695</UnitedStates>
-    <Northeast>1600</Northeast>
-    <Midwest>1660</Midwest>
-    <South>1760</South>
-    <West>1660</West>
+        <Year>1974</Year>
+        <UnitedStates>1695</UnitedStates>
+        <Northeast>1600</Northeast>
+        <Midwest>1660</Midwest>
+        <South>1760</South>
+        <West>1660</West>
     </Row>
     
     <Row name="1975">
