@@ -23,15 +23,16 @@
     
     <!--highcharts-->
     <script src="datasets/avqsqft/avgsqft-script.js"></script>
-    <script src="datasets/soldpricerange/soldpricerange-ex.js"></script>
+    <script src="datasets/soldpricerange/soldpricerange.js"></script>
+    <script src="datasets/soldpricerange/soldpricerange-trial.js"></script>
 
 </head>
 
     <body>
         <div class="container">
           <!--top nav-->
-          <div class="row">
-            <div class="col-md-2 temp oswald-bold"> 
+          <div class="row navdiv visible-md visible-lg visible-sm">
+            <div class="col-sm-2 col-md-2 nav oswald-bold"> 
               <p><span id="month"></span> <span id="day"></span>, <span id="years"></span></p>
               <script>
                 //putting the date on the page
@@ -48,28 +49,68 @@
                 var theFullDate = month + " " + day + ", " + years;
               </script>
             </div>
-            <div class="col-md-2 temp"><a>Today's Paper</a></div>
-            <div class="col-md-2 temp">
-              <span class="glyphicon glyphicon-certificate" aria-hidden="true"></span>
-              <div class="inline" id="weather"></div>
+            <div class="col-sm-2 col-md-2 nav"><a target="_blank">Today's Paper</a></div>
+            <div class="col-sm-2 col-md-2 nav">
+              <a target="_blank"><span class="glyphicon glyphicon-certificate" aria-hidden="true"></span>
+              <div class="inline" id="weather"></div></a>
               <script>
                 function weather(o){
                 document.getElementById("weather").innerHTML="Weather "+o.query.results.channel.item.condition.temp+"&deg; F"
                 }
               </script>
             </div>
-            <div class="col-md-1 temp">Traffic</div>
-            <div class="col-md-1 temp">Surf</div>
-            <div class="col-md-1 temp">Webcams</div>
-            <div class="col-md-2 temp">
+            <div class="col-sm-2 col-md-1 nav"><a target="_blank">Traffic</a></div>
+            <div class="col-sm-2 col-md-1 nav"><a target="_blank">Surf</a></div>
+            <div class="col-sm-2 col-md-1 nav"><a target="_blank">Webcams</a></div>
+            <div class="col-sm-8 col-md-2 nav">
               <span class="glyphicon glyphicon-search" aria-hidden="true"></span><span class="light-gray">SEARCH</span>
             </div>
-            <div class="col-md-1 temp subscribe">SUBSCRIBE</div>
+            <div class="col-sm-4 col-md-1 nav subscribe txta-center"><a target="_blank">SUBSCRIBE</a></div>
           </div>
+         
           
+           <div class="row categories-nav-div visible-md visible-lg visible-sm">
+            <div class="col-md-1 categories-nav categories-nav-logo">
+                  <a class="logo" href="#">
+                    <img class="logo-style" alt="logo" src="assets/UTSanDiego-Logo.png" />
+                    <img class="logo-style" alt="logo" src="assets/UTSanDiego-Logo-Gray.png" />
+                  </a>
+            </div>
+            <div class="col-md-10 categories-nav categories-nav-cat">
+              <div class="row">
+                <div class="col-md-2 categories"></div>
+                <div class="col-md-2 categories"></div>
+                <div class="col-md-2 categories"></div>
+                <div class="col-md-2 categories"></div>
+                <div class="col-md-2 categories"></div>
+                <div class="col-md-2 categories"></div>
+              </div>
+              <div class="row">
+                <div class="col-md-2 categories"></div>
+                <div class="col-md-2 categories"></div>
+                <div class="col-md-2 categories"></div>
+                <div class="col-md-2 categories"></div>
+                <div class="col-md-2 categories"></div>
+                <div class="col-md-2 categories"></div>
+              </div>
+            </div>
+            <div class="col-md-1 categories-nav categories-nav-articles">
+              <a class="articlecount" href="#">
+                <img class="articlecount-style" alt="article" src="assets/articlecount-orange.png" />
+                <img class="articlecount-style" alt="article" src="assets/articlecount-black.png" />
+              </a>
+            </div>
+          </div> 
           
-          
-          
+          <!--
+            <div class="col-sm-2 col-md-2 categories-nav"><a target="_blank">Today's Paper</a></div>
+            <div class="col-sm-2 col-md-2 categories-nav"><a target="_blank">Webcams</a></div>
+            <div class="col-sm-2 col-md-1 categories-nav"><a target="_blank">Traffic</a></div>
+            <div class="col-sm-2 col-md-1 categories-nav"><a target="_blank">Surf</a></div>
+            <div class="col-sm-2 col-md-1 categories-nav"><a target="_blank">Webcams</a></div>
+            <div class="col-sm-8 col-md-2 categories-nav"><a target="_blank">Webcams</a></div>
+            <div class="col-sm-4 col-md-1 categories-nav"><a target="_blank">SUBSCRIBE</a></div>
+          -->
           
           
           
@@ -80,19 +121,24 @@
             <div class="col-md-12">
             </div>
               
-              <h1><a>Hello, currect project!</a></h1>
+              <h1>Hello, currect project!</h1>
               <div id="avgsqft-linechart"></div>
               <div>
                 <div id="soldpricerange-pie2003"></div>
                 <div id="soldpricerange-pie2008"></div>
                 <div id="soldpricerange-pie2013"></div>
+
+                <!--example of dual legend
+                <div id="HouseChart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                <div id="PeopleChart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>-->
+                
               </div>
               
               
               
             </div>
           </div>
-        </div>
+
         
         <!--scripts-->
         <script type="text/javascript" src="http://query.yahooapis.com/v1/public/yql?q=select%20item%20from%20weather.forecast%20where%20location%3D%2292108%22&format=json&callback=weather"></script>

@@ -1,97 +1,158 @@
-var pr1 = [];
-var pr2 = [];
-var pr3 = [];
-var pr4 = [];
-var pr5 = [];
-var pr6 = [];
-var pr7 = [];
-var pr8 = [];
-var pr9 = [];
-var year = [];
-
-
-$(document).ready(function() { //runs the function
+$(function () {
     
-    $.ajax({ //loads in xml file
-        type: "GET",
-        url: "datasets/soldpricerange/soldpricerange.xml",
-        dataType: "xml",
-        success: parseXML
+    Highcharts.setOptions({
+	//colors: ['#c8e6e6']
     });
     
-    function parseXML(xml) { 
-        $(xml).find('Row').each(function() { //starts loop to find all people, etc
-            var $row = $(this); 	    
-            year.push(parseInt($row.find('Year').text()));
-            unitedStates.push(parseInt($row.find('UnitedStates').text()));
-            northeast.push(parseInt($row.find('Northeast').text()));
-            midwest.push(parseInt($row.find('Midwest').text()));
-            south.push(parseInt($row.find('South').text()));
-            west.push(parseInt($row.find('West').text()));
-        });
-        
-        //console.log(year);
-        buildChart(); //finally builds chart -- needs to be inside function but outside loop so it won't try to write the chart 100 times, etc.
-    }
     
-    function buildChart(xml) { //tells how to build chart, but need to add buildChart blah blah in document ready above
-        var chart1 = new Highcharts.Chart({
+    $('#soldpricerange-pie2003').highcharts({
+	//colors: ['#00000;'],
         chart: {
-            renderTo: 'soldpricerange-pie2003',
-            type: 'pie'
-            },
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false
+        },
         title: {
-            text: 'Sold Price Range'
-            },
-        xAxis: {
-            categories: year
-            },
-        yAxis: {
-            title: {
-            text: 'Square feet'
+            text: 'Number of New Single-Family Houses Sold by Sales Price Range, 2003'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: false,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                },
+		showInLegend: true
             }
         },
-	plotOptions: {
-	    marker: {
-	    enabled: false
-	    }
-	},
-        /*series: [{
-            name: 'United States',
-            data: unitedStates
-            }, {
-            name: 'Northeast',
-            data: northeast
-            }, {
-            name: 'Midwest',
-            data: midwest
-            }, {
-            name: 'South',
-            data: south
-            }, {
-            name: 'West',
-            data: west
-            }]
-        */
-	
-	series: [{
+        series: [{
             type: 'pie',
-            name: 'Browser share',
+            name: 'Sold price range - 2003',
             data: [
-                ['Firefox',   45.0],
-                ['IE',       26.8],
-                {
-                    name: 'Chrome',
-                    y: 12.8,
-                    sliced: true,
-                    selected: true
-                },
-                ['Safari',    8.5],
-                ['Opera',     6.2],
-                ['Others',   0.7]
+                ['Under $125,000',   13.8],
+                ['$125,000 to $149,999',       13.4],
+		['$150,000 to $199,999', 24.3],
+                ['$200,000 to $249,999',    13.6],
+                ['$250,000 to $299,999',     10.3],
+                ['$300,000 to $399,999',    13.1],
+                ['$400,000 to $499,999',     5.2],
+                ['$500,000 to $749,999',     4.7],
+                ['$750,000 and over',   1.6]
             ]
         }]
-	});
-	
-    }	
+    });
+    
+    
+    
+    $('#soldpricerange-pie2008').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false
+        },
+        title: {
+            text: 'Number of New Single-Family Houses Sold by Sales Price Range, 2008'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: false,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                },
+		showInLegend: true
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: 'Sold price range - 2008',
+            data: [
+                ['Under $125,000',   6.4],
+                ['$125,000 to $149,999',       9.5],
+		['$150,000 to $199,999', 21.9],
+                ['$200,000 to $249,999',    17.7],
+                ['$250,000 to $299,999',     13],
+                ['$300,000 to $399,999',    14.2],
+                ['$400,000 to $499,999',     7.2],
+                ['$500,000 to $749,999',     6.4],
+                ['$750,000 and over',   3.7]
+            ]
+        }]
+    });
+    
+    
+    
+    $('#soldpricerange-pie2013').highcharts({
+	chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false
+        },
+        title: {
+            text: 'Number of New Single-Family Houses Sold by Sales Price Range, 2013'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+	    
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: false,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                },
+		showInLegend: true
+            },
+	    point: {
+                    events: {
+                        /*click: function(event) {
+                            console.log(this);
+                            if (previousPoint) {
+                                previousPoint.update({ color: '#7cb5ec' });
+                            }
+                            previousPoint = this;
+                            this.update({ color: '#fe5800' });
+                            }*/
+			    click: function(event) {
+                            console.log(this);
+                            this.update({ color: '#fe5800' }, true, false); }
+                    }
+                }
+        },
+        series: [{
+            type: 'pie',
+            name: 'Sold price range - 2013',
+            data: [
+                ['Under $125,000',   2.1],
+                ['$125,000 to $149,999',     5.8],
+		['$150,000 to $199,999',    18.4],
+                ['$200,000 to $249,999',    16.8],
+                ['$250,000 to $299,999',     15.6],
+                ['$300,000 to $399,999',    19.8],
+                ['$400,000 to $499,999',     9.3],
+                ['$500,000 to $749,999',     8.4],
+                ['$750,000 and over',   3.7]
+            ]
+        }]
+    });
+    
 });
