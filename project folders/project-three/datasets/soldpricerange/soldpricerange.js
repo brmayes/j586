@@ -16,11 +16,17 @@ $(function () {
 	    align: 'left',
 	    verticalAlign: 'top',
 	    layout: 'vertical',
-	    x:  400,
+	    x:  55,
 	    y: 65
         },
         title: {
-            text: 'Number of New Single-Family Houses Sold by Sales Price Range, 2003'
+            text: '2003',
+            style: {
+               color: '#FF6839',
+               //color: '#a1a1a1', grey
+               fontWeight: 'bold',
+               fontFamily: 'Oswald, sans-serif'
+            } 
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -44,7 +50,7 @@ $(function () {
             name: 'Sold price range - 2003',
             data: [
                 ['Under $149,999',       27.2],
-		['$150,000 to $199,999', 24.3],
+                ['$150,000 to $199,999', 24.3],
                 ['$200,000 to $249,999',    13.6],
                 ['$250,000 to $299,999',     10.3],
                 ['$300,000 to $399,999',    13.1],
@@ -69,7 +75,7 @@ $(function () {
 	    align: 'left',
 	    verticalAlign: 'top',
 	    layout: 'vertical',
-	    x:  400,
+	    x:  55,
 	    y: 65
         },
         tooltip: {
@@ -123,7 +129,7 @@ $(function () {
 	    align: 'left',
 	    verticalAlign: 'top',
 	    layout: 'vertical',
-	    x:  400,
+	    x:  55,
 	    y: 65
         },
         plotOptions: {
