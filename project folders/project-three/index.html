@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>New Characteristics of Housing</title>
     
+    <!--favicon-->
+    <link rel="icon" type="image/png" href="assets/UTSanDiego-favicon.png">
+    
     <!--scripts-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -22,7 +25,7 @@
     <![endif]-->
     
     <!--slider nav bar-->
-    <link type="text/css" rel="stylesheet" href="css/demo.css" />
+    <link type="text/css" rel="stylesheet" href="css/slidernav.css" />
     <link type="text/css" rel="stylesheet" href="js/dist/css/jquery.mmenu.all.css" />
     <script type="text/javascript" src="js/dist/js/jquery.mmenu.min.all.js"></script>
     <script type="text/javascript" src="js/dist/js/slidermenu.js"></script>
@@ -36,6 +39,70 @@
   
   
   <body>
+    
+    <!--mobile nav-->
+    <div id="slider-nav" class="visible-xs visible-sm">
+      <div class="header">
+        <a href="#menu"></a>
+        The San Diego Union-Tribune
+      </div>
+      <nav id="menu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li>
+            <a href="#today">Today</a>
+            <ul>
+              <li>
+                <a href="#sections/date">
+                  <p><span id="month2"></span> <span id="day2"></span>, <span id="years2"></span></p>
+                  <script>
+                    //putting the date on the page
+                    var month2 = new Date();
+                    var month2Array = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+                    document.getElementById("month2").innerHTML = month2Array[month2.getMonth()];
+                    
+                    var day2 = new Date();
+                    document.getElementById("day2").innerHTML = day2.getDate();
+                    
+                    var years2 = new Date();
+                    document.getElementById("years2").innerHTML = years2.getFullYear();
+                    
+                    var theFullDate = month2 + " " + day2 + ", " + years2;
+                  </script>
+                </a>
+              </li>
+              <li><a href="#sections/business">Today's Paper</a></li>
+              <li><a href="#sections/weather">Weather</a></li>
+              <li><a href="#sections/traffic">Traffic</a></li>
+              <li><a href="#sections/surf">Surf</a></li>
+              <li><a href="#sections/webcams">Webcams</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#sections">Sections</a>
+            <ul>
+              <li><a href="#sections/news">NEWS</a></li>
+              <li><a href="#sections/business">BUSINESS</a></li>
+              <li><a href="#sections/tv">U-T TV</a></li>
+              <li><a href="#sections/military">MILITARY</a></li>
+              <li><a href="#sections/offers">U-T OFFERS</a></li>
+              <li><a href="#sections/realestate">REAL ESTATE</a></li>
+              <li><a href="#sections/sports">SPORTS</a></li>
+              <li><a href="#sections/entertainment">ENTERTAINMENT</a></li>
+              <li><a href="#sections/market">MARKETCONNECT</a></li>
+              <li><a href="#sections/opinion">OPINION</a></li>
+              <li><a href="#sections/classifieds">CLASSIFIEDS</a></li>
+              <li><a href="#sections/cars">CARS</a></li>
+            </ul>
+          </li>
+          <li><a href="#new">New Articles</a></li>
+        </ul>
+      </nav>
+    </div>
+    
+    
+    
+    
     <div class="container">
       
       <!--top nav-->
@@ -114,65 +181,7 @@
       </div>
       
       
-      <!--mobile nav-->
-      <div id="slider-nav" class="visible-xs visible-sm">
-        <div class="header">
-          <a href="#menu"></a>
-          The San Diego Union-Tribune
-        </div>
-        <nav id="menu">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li>
-              <a href="#today">Today</a>
-              <ul>
-                <li>
-                  <a href="#sections/date">
-                    <p><span id="month2"></span> <span id="day2"></span>, <span id="years2"></span></p>
-                    <script>
-                      //putting the date on the page
-                      var month2 = new Date();
-                      var month2Array = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-                      document.getElementById("month2").innerHTML = month2Array[month2.getMonth()];
-                      
-                      var day2 = new Date();
-                      document.getElementById("day2").innerHTML = day2.getDate();
-                      
-                      var years2 = new Date();
-                      document.getElementById("years2").innerHTML = years2.getFullYear();
-                      
-                      var theFullDate = month2 + " " + day2 + ", " + years2;
-                    </script>
-                  </a>
-                </li>
-                <li><a href="#sections/business">Today's Paper</a></li>
-                <li><a href="#sections/weather">Weather</a></li>
-                <li><a href="#sections/traffic">Traffic</a></li>
-                <li><a href="#sections/surf">Surf</a></li>
-                <li><a href="#sections/webcams">Webcams</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#sections">Sections</a>
-              <ul>
-                <li><a href="#sections/news">NEWS</a></li>
-                <li><a href="#sections/business">BUSINESS</a></li>
-                <li><a href="#sections/tv">U-T TV</a></li>
-                <li><a href="#sections/military">MILITARY</a></li>
-                <li><a href="#sections/offers">U-T OFFERS</a></li>
-                <li><a href="#sections/realestate">REAL ESTATE</a></li>
-                <li><a href="#sections/sports">SPORTS</a></li>
-                <li><a href="#sections/entertainment">ENTERTAINMENT</a></li>
-                <li><a href="#sections/market">MARKETCONNECT</a></li>
-                <li><a href="#sections/opinion">OPINION</a></li>
-                <li><a href="#sections/classifieds">CLASSIFIEDS</a></li>
-                <li><a href="#sections/cars">CARS</a></li>
-              </ul>
-            </li>
-            <li><a href="#new">New Articles</a></li>
-          </ul>
-        </nav>
-      </div>
+
       
       
       

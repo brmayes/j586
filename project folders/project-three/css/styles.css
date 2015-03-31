@@ -145,6 +145,10 @@ body {
   color: #444444;
   font-size: 48px;
   font-weight: 700;
+  padding-top: 15px;
+  padding-bottom: 25px;
+  padding-left: 0.7em;
+  padding-right: 0.7em;
 }
 
 .subtitle {

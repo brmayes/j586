@@ -153,6 +153,8 @@ li.mm-vertical.mm-opened > .mm-panel {
     position: relative; }
     .mm-listview > li > a,
     .mm-listview > li > span {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
@@ -449,7 +451,7 @@ em.mm-counter {
   right: 50px;
   top: 50%; }
   em.mm-counter + a.mm-next {
-    padding-left: 40px; }
+    padding-left: 100px; }
     em.mm-counter + a.mm-next + a,
     em.mm-counter + a.mm-next + span {
       margin-right: 90px; }
