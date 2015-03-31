@@ -3,6 +3,11 @@ h1, h2, h3 {
   font-family: Oswald;
 }
 
+h4, h5, h6 {
+  font-family: Oswald;
+  font-weight: 200;
+}
+
 body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -18,7 +23,11 @@ body {
 }
 
 .light-gray {
-  color: lightgray;
+  color: #a1a1a1;
+}
+
+.orange {
+  color: #FF6839;
 }
 
 .inline {
@@ -35,6 +44,15 @@ body {
 
 .txta-center {
   text-align: center;
+}
+
+.content-padding-heading {
+  padding-left: 2.7em;
+  padding-right: 0.7em;
+}
+
+h5 {
+  font-size: 24px;
 }
 
 /*NAVIGAVTION*/
@@ -146,12 +164,10 @@ body {
   font-size: 48px;
   font-weight: 700;
   padding-top: 15px;
-  padding-bottom: 25px;
   padding-left: 0.7em;
   padding-right: 0.7em;
 }
 
 .subtitle {
-  color: #a1a1a1;
-  font-size: 20px;
+  font-weight: 500;
 }
