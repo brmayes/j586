@@ -12,6 +12,13 @@ $(function () {
             plotBorderWidth: null,
             plotShadow: false
         },
+	legend: {
+	    align: 'left',
+	    verticalAlign: 'top',
+	    layout: 'vertical',
+	    x:  400,
+	    y: 65
+        },
         title: {
             text: 'Number of New Single-Family Houses Sold by Sales Price Range, 2003'
         },
@@ -57,6 +64,13 @@ $(function () {
         },
         title: {
             text: 'Number of New Single-Family Houses Sold by Sales Price Range, 2008'
+        },
+	legend: {
+	    align: 'left',
+	    verticalAlign: 'top',
+	    layout: 'vertical',
+	    x:  400,
+	    y: 65
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -104,6 +118,13 @@ $(function () {
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
 	    
+        },
+	legend: {
+	    align: 'left',
+	    verticalAlign: 'top',
+	    layout: 'vertical',
+	    x:  400,
+	    y: 65
         },
         plotOptions: {
             pie: {

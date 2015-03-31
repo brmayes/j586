@@ -14,6 +14,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="http://code.highcharts.com/highcharts.js"></script>
     <script src="assets/additionalgraphics/quickfacts.js"></script>
+    <script type="text/javascript" src="js/weather.js"></script>
     
     <!-- CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -56,20 +57,6 @@
               <li>
                 <a href="#sections/date">
                   <p><span id="month2"></span> <span id="day2"></span>, <span id="years2"></span></p>
-                  <script>
-                    //putting the date on the page
-                    var month2 = new Date();
-                    var month2Array = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-                    document.getElementById("month2").innerHTML = month2Array[month2.getMonth()];
-                    
-                    var day2 = new Date();
-                    document.getElementById("day2").innerHTML = day2.getDate();
-                    
-                    var years2 = new Date();
-                    document.getElementById("years2").innerHTML = years2.getFullYear();
-                    
-                    var theFullDate = month2 + " " + day2 + ", " + years2;
-                  </script>
                 </a>
               </li>
               <li><a href="#sections/business">Today's Paper</a></li>
@@ -111,20 +98,6 @@
       <div class="row navdiv visible-md visible-lg">
         <div class="col-sm-2 col-md-2 nav oswald-bold">
           <p><span id="month"></span> <span id="day"></span>, <span id="years"></span></p>
-          <script>
-            //putting the date on the page
-            var month = new Date();
-            var monthArray = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-            document.getElementById("month").innerHTML = monthArray[month.getMonth()];
-            
-            var day = new Date();
-            document.getElementById("day").innerHTML = day.getDate();
-            
-            var years = new Date();
-            document.getElementById("years").innerHTML = years.getFullYear();
-            
-            var theFullDate = month + " " + day + ", " + years;
-          </script>
         </div>
         <div class="col-sm-2 col-md-2 nav"><a target="_blank">Today's Paper</a></div>
         <div class="col-sm-2 col-md-2 nav">
@@ -132,11 +105,6 @@
             <span class="glyphicon glyphicon-certificate" aria-hidden="true"></span>
             <div class="inline" id="weather"></div>
           </a>
-          <script>
-            function weather(o){
-            document.getElementById("weather").innerHTML="Weather "+o.query.results.channel.item.condition.temp+"&deg; F"
-            }
-          </script>
         </div>
         <div class="col-sm-2 col-md-1 nav"><a target="_blank">Traffic</a></div>
         <div class="col-sm-2 col-md-1 nav"><a target="_blank">Surf</a></div>
@@ -195,7 +163,7 @@
         <h5 class="content-padding-heading">By <span class="orange">Brittany Renee Mayes</span> April 1, 2015</h5>
         <div id="avgsqft-linechart"></div>
         <div>
-          <div id="airConditioning"></div>
+          <!--<div id="airConditioning"></div>-->
           <div id="soldpricerange-pie2003"></div>
           <div id="soldpricerange-pie2008"></div>
           <div id="soldpricerange-pie2013"></div>
@@ -205,7 +173,11 @@
         </div>
       </div>
     </div>
-    <!--scripts-->
+    <!-- additional scripts-->
     <script type="text/javascript" src="http://query.yahooapis.com/v1/public/yql?q=select%20item%20from%20weather.forecast%20where%20location%3D%2292108%22&format=json&callback=weather"></script>
+    <script type="text/javascript" src="js/date.js"></script>
+    <script type="text/javascript" src="js/dateSliderNav.js"></script>
+    
+  
   </body>
 </html>
