@@ -93,14 +93,18 @@
     padding-left: 15px;
   }
 
+  .no-padding {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
 /*categories navigation*/
   .categories-nav-div {
     margin-top: 20px;
   }
   
   .logo-style {
-    width: 90px;
-    margin-top: -4px;
+    width: 100%;
   }
   
   .logo img:last-child{
@@ -133,7 +137,8 @@
   }
   
   .articlecount-style {
-    width: 100px;
+    width: 100%;
+    min-height: 80px;
   }
   
   .articlecount img:last-child{

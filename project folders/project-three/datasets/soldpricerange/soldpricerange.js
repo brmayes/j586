@@ -25,7 +25,8 @@ $(function () {
                color: '#FF6839',
                //color: '#a1a1a1', grey
                fontWeight: 'bold',
-               fontFamily: 'Oswald, sans-serif'
+               fontFamily: 'Oswald, sans-serif',
+               x: -70
             } 
         },
         tooltip: {
