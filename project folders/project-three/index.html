@@ -32,6 +32,26 @@
     <script type="text/javascript" src="js/dist/js/jquery.mmenu.min.all.js"></script>
     <script type="text/javascript" src="js/dist/js/slidermenu.js"></script>
     
+    <!--pie char toggle-->
+    <script>
+      $(function () {
+        $('#tabs-container div').hide().eq(0).show();
+        $('#tabs-container-2 div').hide().eq(0).show();
+        $('#tabs-container-2 div').hide().eq(0).show();
+        
+        $('#tabs div').click(function () {
+          $('#tabs-container div').hide()
+          $('#tabs-container-2 div').hide()
+          $('#tabs-container-3 div').hide()
+          num = $('#tabs div').index(this);
+          $('#tabs-container div').hide().eq(num).show();
+          $('#tabs-container-2 div').hide().eq(num).show();
+          $('#tabs-container-3 div').hide().eq(num).show();
+        });
+      });
+    </script>
+    
+    
     <!-- highcharts-->
     <script src="datasets/avqsqft/avgsqft-script.js"></script>
     <script src="datasets/soldpricerange/soldpricerange.js"></script>

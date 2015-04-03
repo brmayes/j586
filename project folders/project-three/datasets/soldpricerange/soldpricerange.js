@@ -21,12 +21,14 @@ $(function () {
         },
         title: {
             text: '2003',
+	    align: 'left',
             style: {
                color: '#FF6839',
                //color: '#a1a1a1', grey
                fontWeight: 'bold',
                fontFamily: 'Oswald, sans-serif',
-               x: -70
+
+               
             } 
         },
         tooltip: {
@@ -58,7 +60,7 @@ $(function () {
                 ['$400,000 to $499,999',     5.2],
                 ['$500,000 and over',   6.3]
             ]
-        }]
+        }] 
     });
     
     
