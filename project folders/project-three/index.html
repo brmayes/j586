@@ -36,6 +36,18 @@
     <script src="datasets/avqsqft/avgsqft-script.js"></script>
     <script src="datasets/soldpricerange/soldpricerange.js"></script>
     <script src="datasets/soldpricerange/soldpricerange-trial.js"></script>
+    
+    <!--data table-->
+    <link rel="stylesheet" type="text/css" href="datasets/datatable/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="datasets/datatable/demo.css">
+    <script type="text/javascript" language="javascript" src="datasets/datatable/jquery.dataTables.js"></script>
+    <script type="text/javascript" language="javascript" class="init">
+      $(document).ready(function() {
+        $('#example').dataTable( {
+          "ajax": "datasets/datatable/arrays.txt"
+        } );
+      } );
+    </script>
   </head>
   
   
@@ -170,28 +182,56 @@
       
       <div class="row">
         <div class="col-md-12">
-            <div class="header-information">
-                <h1 class="title">Pricing Statistics of New Housing Over Time</h1>
-                <h3 class="lightgray content-padding-heading oswald-bold subtitle">The evolution of the prices of houses on the market nationally and by region</h3>
-                <h5 class="content-padding-heading">By <span class="orange">Brittany Renee Mayes</span> April 1, 2015</h5>
+          <div class="header-information">
+              <h1 class="title">Pricing Statistics of New Housing Over Time</h1>
+              <h3 class="lightgray content-padding-heading oswald-bold subtitle">The evolution of the prices of houses on the market nationally and by region</h3>
+              <h5 class="content-padding-heading">By <span class="orange">Brittany Renee Mayes</span> April 1, 2015</h5>
+          </div>
+          <div id="avgsqft-linechart"></div>
+          <div class="row">
+            <div class="col-md-8">
+              <h3 class="oswald-bold black">Number of New Single-Family Houses Sold by Sales Price Range by Year</h3>
+                <div id="soldpricerange-pie2003"></div>
+                <div id="soldpricerange-pie2008"></div>
+                <div id="soldpricerange-pie2013"></div>
             </div>
-            <div id="avgsqft-linechart"></div>
-                <div class="row">
-                    <div class="col-md-8">
-                        <h3 class="oswald-bold black">Number of New Single-Family Houses Sold by Sales Price Range by Year</h3>
-                        <div id="soldpricerange-pie2003"></div>
-                        <div id="soldpricerange-pie2008"></div>
-                        <div id="soldpricerange-pie2013"></div>
-                    </div>
-                    <div class="col-md-4">
-                        THIS IS WHERE I WILL INSERT TEXT
-                    </div>
-                  <!--example of dual legend
-                    <div id="HouseChart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-                    <div id="PeopleChart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>-->
-                </div>
+            <div class="col-md-4">
+                THIS IS WHERE I WILL INSERT TEXT
             </div>
+            <!--example of dual legend
+              <div id="HouseChart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+              <div id="PeopleChart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>-->
+          </div>
+        
+        <!--data table-->
+        <div class="dt-example">
+          <section style="margin-top: 125px;">
+            <table id="example" class="display" cellspacing="0" width="100%">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Position</th>
+                  <th>Office</th>
+                  <th>Extn.</th>
+                  <th>Start date</th>
+                  <th>Salary</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th>Name</th>
+                  <th>Position</th>
+                  <th>Office</th>
+                  <th>Extn.</th>
+                  <th>Start date</th>
+                  <th>Salary</th>
+                </tr>
+              </tfoot>
+            </table>
+          </section>
         </div>
+        </div>
+      </div>
     </div>
     
     
