@@ -1,0 +1,49 @@
+/*price range by year*/
+
+.chart {
+   background-color: lightblue;
+   min-height: 500px;
+}
+
+.tabs-info {
+   background-color: lightgreen;
+   min-height: 300px;
+   padding-left: 0;
+   padding-right: 0;
+   margin-right: -15px;
+}
+
+.year-tabs {
+   min-height: 50px;
+   background-color: blanchedalmond;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+
+.pricerange-years {
+   margin-top: 30px;
+}
+
+.pricerange-yearlabel {
+   min-height: 50px;
+   padding: 0;
+}
+
+.middle-button {
+   border-left: 1px solid black;
+   border-right: 1px solid black;
+}
+   
+
+.year-tabs button {
+   background-color: blanchedalmond;
+   border: none;
+   width: 100%;
+   min-height: 50px;
+   padding: 0;
+}
+
+.tab-margin {
+   margin-left: 0;
+}

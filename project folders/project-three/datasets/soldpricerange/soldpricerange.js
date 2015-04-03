@@ -21,7 +21,6 @@ $(function () {
         },
         title: {
             text: '2003',
-	    align: 'left',
             style: {
                color: '#FF6839',
                //color: '#a1a1a1', grey
