@@ -199,30 +199,7 @@
 
       
       
-      
-      <div>
-        <script>
-          $(document).ready(function(){
-            $('.showSingle').click(function(){
-                  $('.targetImg').hide();
-                  $('#div'+$(this).attr('target')).show();
-            });
-            
-            $('.showSingle').click(function(){
-                $(".targetImg_mobile").hide();
-                $("#mobile_div"+$(this).attr("target")).show();
-            });
-          });
-        </script>
-        <div class="col-md-2 alldiv"><button target="1" class="showSingle">All</button></div>
-        <div class="col-md-2"><button target="2" class="showSingle">HIV-AIDS</button></div>
-        <div class="col-md-2"><button target="3" class="showSingle">Malaria</button></div>
-      
-        <div id="div1" class="targetImg"><div id="soldpricerange-pie2008"></div></div> 
-        <div id="div2" class="targetImg" style="display: none"><div id="soldpricerange-pie2003"></div></div>
-        <div id="div3"  class="targetImg" style="display: none"><div id="soldpricerange-pie2013"></div></div>
-      </div>
-      
+\
       
       
       
@@ -294,13 +271,13 @@
             <div class="col-md-8 chart">
               <div id="tabs-container-2">
                 <div id="content1-2">
-                  <span id="soldpricerange-pie2003"></span>
+                  <iframe src="pie2003.html" style="border:0px #FFFFFF none;" name="pie2003" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" height="425px" width="100%"></iframe>
                 </div>
                 <div id="content2-2">
-                  <span id="soldpricerange-pie2008"></span>
+                  <iframe src="pie2008.html" style="border:0px #FFFFFF none;" name="pie2008" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" height="425px" width="100%"></iframe>
                 </div>
                 <div>
-                  <span id="soldpricerange-pie2013"></span>
+                  <iframe src="pie2013.html" style="border:0px #FFFFFF none;" name="pie2003" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" height="425px" width="100%"></iframe>
                 </div>
               </div>
             </div>
