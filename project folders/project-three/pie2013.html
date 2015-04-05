@@ -29,8 +29,25 @@
     <!-- highcharts-->
     <script src="datasets/avqsqft/avgsqft-script.js"></script>
     <script src="datasets/soldpricerange/soldpricerange.js"></script>
-    <script src="datasets/soldpricerange/soldpricerange-trial.js"></script>
+    <script src="datasets/soldpricerange/soldpricerange-mobile.js"></script>
 
+    <style>
+
+      
+        @media screen and (max-width: 600px) {
+          #soldpricerange-pie2013mobile { display: block; }  /* show mobile on small screens */
+          #soldpricerange-pie2013 { display: none; } 
+        }
+
+        @media screen and (min-width: 601px) {
+          #soldpricerange-pie2013mobile { display: none; }
+          #soldpricerange-pie2013 { display: block; }/* hide mobile elsewhere */
+        }
+
+
+      </style>
+    
+    
   </head>
   
   
@@ -40,6 +57,7 @@
     
     <div class="container">
       <div id="soldpricerange-pie2013"></div>
+      <div id="soldpricerange-pie2013mobile"></div>
     </div>
     
     

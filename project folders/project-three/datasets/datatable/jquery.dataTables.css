@@ -21,7 +21,7 @@ table.dataTable tfoot th {
 table.dataTable thead th,
 table.dataTable thead td {
   padding: 10px 18px;
-  border-bottom: 1px solid #111111;
+  border-bottom: 1px solid #557193;
 }
 table.dataTable thead th:active,
 table.dataTable thead td:active {
@@ -30,7 +30,7 @@ table.dataTable thead td:active {
 table.dataTable tfoot th,
 table.dataTable tfoot td {
   padding: 10px 18px 6px 18px;
-  border-top: 1px solid #111111;
+  border-top: 1px solid #557193;
 }
 table.dataTable thead .sorting,
 table.dataTable thead .sorting_asc,
@@ -102,14 +102,14 @@ table.dataTable.hover tbody tr.odd:hover,
 table.dataTable.hover tbody tr.even:hover, table.dataTable.display tbody tr:hover,
 table.dataTable.display tbody tr.odd:hover,
 table.dataTable.display tbody tr.even:hover {
-  background-color: whitesmoke;
+  background-color: #DFE9F3;
 }
 table.dataTable.hover tbody tr:hover.selected,
 table.dataTable.hover tbody tr.odd:hover.selected,
 table.dataTable.hover tbody tr.even:hover.selected, table.dataTable.display tbody tr:hover.selected,
 table.dataTable.display tbody tr.odd:hover.selected,
 table.dataTable.display tbody tr.even:hover.selected {
-  background-color: #a9b7d1;
+  background-color: #DFE9F3;
 }
 table.dataTable.order-column tbody tr > .sorting_1,
 table.dataTable.order-column tbody tr > .sorting_2,
@@ -166,7 +166,7 @@ table.dataTable.display tbody tr.odd:hover > .sorting_1,
 table.dataTable.display tbody tr.even:hover > .sorting_1, table.dataTable.order-column.hover tbody tr:hover > .sorting_1,
 table.dataTable.order-column.hover tbody tr.odd:hover > .sorting_1,
 table.dataTable.order-column.hover tbody tr.even:hover > .sorting_1 {
-  background-color: #eaeaea;
+  background-color: #B7D6EB;
 }
 table.dataTable.display tbody tr:hover > .sorting_2,
 table.dataTable.display tbody tr.odd:hover > .sorting_2,
@@ -204,7 +204,7 @@ table.dataTable.order-column.hover tbody tr.even:hover.selected > .sorting_3 {
   background-color: #a4b2cb;
 }
 table.dataTable.no-footer {
-  border-bottom: 1px solid #111111;
+  border-bottom: 1px solid #557193;
 }
 table.dataTable.nowrap th, table.dataTable.nowrap td {
   white-space: nowrap;
@@ -370,36 +370,36 @@ table.dataTable td {
   box-shadow: none;
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
-  color: white !important;
-  border: 1px solid #111111;
+  color: white !important; 
+  border: 1px solid #557193;
   background-color: #585858;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #585858), color-stop(100%, #111111));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #585858), color-stop(100%, #557193));
   /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #585858 0%, #111111 100%);
+  background: -webkit-linear-gradient(top, #6F93B5 0%, #557193 100%);
   /* Chrome10+,Safari5.1+ */
-  background: -moz-linear-gradient(top, #585858 0%, #111111 100%);
+  background: -moz-linear-gradient(top, #6F93B5 0%, #557193 100%);
   /* FF3.6+ */
-  background: -ms-linear-gradient(top, #585858 0%, #111111 100%);
+  background: -ms-linear-gradient(top, #6F93B5 0%, #557193 100%);
   /* IE10+ */
-  background: -o-linear-gradient(top, #585858 0%, #111111 100%);
+  background: -o-linear-gradient(top, #6F93B5 0%, #557193 100%);
   /* Opera 11.10+ */
-  background: linear-gradient(to bottom, #585858 0%, #111111 100%);
+  background: linear-gradient(to bottom, #6F93B5 0%, #557193 100%);
   /* W3C */
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button:active {
   outline: none;
-  background-color: #2b2b2b;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2b2b2b), color-stop(100%, #0c0c0c));
+  background-color: #6F93B5;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6F93B5), color-stop(100%, #557193));
   /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #2b2b2b 0%, #0c0c0c 100%);
+  background: -webkit-linear-gradient(top, #6F93B5 0%, #557193 100%);
   /* Chrome10+,Safari5.1+ */
-  background: -moz-linear-gradient(top, #2b2b2b 0%, #0c0c0c 100%);
+  background: -moz-linear-gradient(top, #6F93B5 0%, #557193 100%);
   /* FF3.6+ */
-  background: -ms-linear-gradient(top, #2b2b2b 0%, #0c0c0c 100%);
+  background: -ms-linear-gradient(top, #6F93B5 0%, #557193 100%);
   /* IE10+ */
-  background: -o-linear-gradient(top, #2b2b2b 0%, #0c0c0c 100%);
+  background: -o-linear-gradient(top, #6F93B5 0%, #557193 100%);
   /* Opera 11.10+ */
-  background: linear-gradient(to bottom, #2b2b2b 0%, #0c0c0c 100%);
+  background: linear-gradient(to bottom, #6F93B5 0%, #557193 100%);
   /* W3C */
   box-shadow: inset 0 0 3px #111;
 }
@@ -436,7 +436,7 @@ table.dataTable td {
 .dataTables_wrapper .dataTables_info,
 .dataTables_wrapper .dataTables_processing,
 .dataTables_wrapper .dataTables_paginate {
-  color: #333333;
+  color: #666;
 }
 .dataTables_wrapper .dataTables_scroll {
   clear: both;
@@ -453,7 +453,7 @@ table.dataTable td {
   padding: 0 !important;
 }
 .dataTables_wrapper.no-footer .dataTables_scrollBody {
-  border-bottom: 1px solid #111111;
+  border-bottom: 1px solid #557193;
 }
 .dataTables_wrapper.no-footer div.dataTables_scrollHead table,
 .dataTables_wrapper.no-footer div.dataTables_scrollBody table {

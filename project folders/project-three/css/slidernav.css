@@ -55,7 +55,7 @@ nav:not(.mm-menu)
 .footer
 {
 	background: #777;
-	font-size: 30px !important;
+	font-size: 5vmin !important;
 	font-weight: bold;
 	letter-spacing: 2px;
 	color: #fff;

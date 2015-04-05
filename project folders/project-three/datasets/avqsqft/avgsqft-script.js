@@ -52,10 +52,8 @@ $(document).ready(function() { //runs the function
                     enabled: false
                 }
 	    },
-        series: [{
-            name: 'United States',
-            data: unitedStates
-            }, {
+        series: [
+	    {
             name: 'Northeast',
             data: northeast
             }, {
@@ -67,7 +65,11 @@ $(document).ready(function() { //runs the function
             }, {
             name: 'West',
             data: west
-            }]
+            }, {
+	    name: 'United States',
+            data: unitedStates
+            }
+	    ]
         });
     }	
 });
