@@ -1,4 +1,4 @@
-/* General */
+ /* General */
   h1, h2, h3 {
     font-family: Oswald;
   }
@@ -52,6 +52,12 @@
   
   h5 {
     font-size: 24px;
+  }
+
+  .centerdiv {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
   }
 
 /*NAVIGAVTION*/
@@ -139,6 +145,7 @@
   .articlecount-style {
     width: 100%;
     min-height: 80px;
+    border: 1px solid white;
   }
   
   .articlecount img:last-child{
@@ -178,3 +185,59 @@
   .subtitle {
     font-weight: 500;
   }
+
+
+/*PIE GRAPHS*/
+/*price range by year*/
+
+.chart {
+   min-height: 450px;
+}
+
+.tabs-info {
+   min-height: 300px;
+   padding: 15px;
+   margin-right: -15px;
+}
+
+.pricerange-years {
+   margin-top: 30px;
+}
+
+.pricerange-yearlabel {
+   min-height: 50px;
+   padding: 0;
+}
+
+.tab-margin {
+   margin-left: 0;
+}
+
+.year-tabs {
+  padding: 0;
+}
+
+.year-tabs button {
+  background-color: blanchedalmond;
+  border: none;
+  width: 80%;
+  min-height: 30px;
+  padding: 0;
+  text-align: center;
+  border-radius: 15px;
+}
+
+/*
+.year-tabs button {
+  background-color: blanchedalmond;
+  border: none;
+  width: 30%;
+  min-height: 30px;
+  padding: 0;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.middle-button {
+  margin: 0px 10px;
+}*/

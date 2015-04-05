@@ -13,7 +13,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="http://code.highcharts.com/highcharts.js"></script>
-    <script src="assets/additionalgraphics/quickfacts.js"></script>
     <script type="text/javascript" src="js/weather.js"></script>
     
     <!-- CSS -->
@@ -208,6 +207,50 @@
               <h5 class="content-padding-heading">By <span class="orange">Brittany Renee Mayes</span> April 1, 2015</h5>
           </div>
           <div id="avgsqft-linechart"></div>
+          
+          <div class="row">
+            <div class="col-md-4 ">
+              <!--<div class="row tabs">
+                  <div class="year-tabs centerdiv col-md-12">
+                    <button href="#">2003</button>
+                    <button class="middle-button" href="#">2008</button>
+                    <button href="#">2013</button>
+                  </div>
+                </div>-->
+                  
+                <div class="row tab-margin" id="tabs" >
+                  <div class="year-tabs centerdiv col-md-4 col-xs-4"><button href="#">2003</button></div>
+                  <div class="year-tabs centerdiv middle-button col-md-4 col-xs-4"><button href="#">2008</button></div>
+                  <div class="year-tabs centerdiv col-md-4 col-xs-4"><button href="#">2013</button></div>
+              </div>
+ 
+
+              <div class="tabs-info">
+                <p>Unrelated text is here. Text in this area is static and should display at all times.</p>
+                <div id="tabs-container">
+                    <div id="content1">Content for link 1. Should display only when Link 1 is clicked.</div>
+                    <div id="content2">Content for link 2. Should display only when Link 2 is clicked.</div>
+                    <div id="content3">Content for link 3. Should display only when Link 3 is clicked.</div>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col-md-8 chart">
+              <div id="tabs-container-2">
+                <div id="content1-2">
+                  <iframe src="pie2003.html" style="border:0px #FFFFFF none;" name="pie2003" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" height="425px" width="100%"></iframe>
+                </div>
+                <div id="content2-2">
+                  <iframe src="pie2008.html" style="border:0px #FFFFFF none;" name="pie2008" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" height="425px" width="100%"></iframe>
+                </div>
+                <div>
+                  <iframe src="pie2013.html" style="border:0px #FFFFFF none;" name="pie2003" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" height="425px" width="100%"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!--
           <div class="row">
             <div class="col-md-8">
               <h3 class="oswald-bold black">Number of New Single-Family Houses Sold by Sales Price Range by Year</h3>
@@ -218,10 +261,10 @@
             <div class="col-md-4">
                 THIS IS WHERE I WILL INSERT TEXT
             </div>
-            <!--example of dual legend
+            example of dual legend
               <div id="HouseChart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-              <div id="PeopleChart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>-->
-          </div>
+              <div id="PeopleChart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+          </div> -->
         
         <!--data table-->
         <div class="dt-example">
