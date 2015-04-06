@@ -55,6 +55,7 @@
     <script src="datasets/avqsqft/avgsqft-script.js"></script>
     <script src="datasets/soldpricerange/soldpricerange.js"></script>
     <script src="datasets/soldpricerange/soldpricerange-mobile.js"></script>
+    <script src="datasets/pricepersqft/pricepersqft-script.js"></script>
     
     <!--data table-->
     <link rel="stylesheet" type="text/css" href="datasets/datatable/jquery.dataTables.css">
@@ -130,7 +131,7 @@
       <!--top navigation-->
       <div class="row navdiv visible-md visible-lg">
         <div class="col-md-7 nav">
-          <div class="row">
+          <div class="row topnav-style">
             <div class="col-md-3 oswald-bold">
               <p class="navbar-date"><span id="month"></span> <span id="day"></span>, <span id="years"></span></p>
             </div>
@@ -263,6 +264,10 @@
           </div>
           
           <div class="avgsqft">
+            <!--<div class="subhead-div">
+              <img class="icons" src="assets/houses.png">
+              <h3 class="subheaders">The Reasons:</h3>
+            </div>-->
             <p>
               Prices of real estate in the United States are rising due to several reasons. The first of which includes the size of the house being built. As shown below, nationally
               between 1973 and 2013, there was over an 150% increase in average square foot per year. 
@@ -270,9 +275,25 @@
             <div id="avgsqft-linechart"></div>
           </div>
         
+          <div class="pricepersqft">
+            <div class="row">
+              <div class="col-md-4 col-xs-12">
+                <p class="pricepersqft-copy">
+                  In addition to the amount of square footage per house, the amount home buyers paid per square foot increased steadily. In 2003, nearly half of houses were valued at
+                  less than $69.99 per square foot. In juxtaposition, that number decreased by 15% in just five years time and continued to drop another six percent by 2013.
+                </p>
+              </div>
+              <div class="col-md-8 col-xs-12">
+                <div id="pricepersqft"></div>
+              </div>
+            </div>
+          </div>
+
+        
+        
         <!--data table-->
         <div class="dt-example">
-          <h3>Number of Houses Sold in the US by Year</h3>
+          <h3>Number of Houses Sold in the US by Year from 1999 to 2013</h3>
           <section class="datatable">
             <table id="example" class="display" cellspacing="0" width="100%">
               <thead>
