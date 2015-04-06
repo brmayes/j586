@@ -31,21 +31,29 @@
     <script src="datasets/soldpricerange/soldpricerange.js"></script>
     <script src="datasets/soldpricerange/soldpricerange-mobile.js"></script>
 
+<!--
     <style>
 
       
-        @media screen and (max-width: 600px) {
-          #soldpricerange-pie2013mobile { display: block; }  /* show mobile on small screens */
-          #soldpricerange-pie2013 { display: none; } 
+        @media screen and (min-width: 0px) and (max-width: 600px) {
+          #soldpricerange-pie2008mobile { display: block; }  /* show mobile on small screens */
         }
 
-        @media screen and (min-width: 601px) {
-          #soldpricerange-pie2013mobile { display: none; }
-          #soldpricerange-pie2013 { display: block; }/* hide mobile elsewhere */
+        @media screen and (min-width: 601px) and (max-width: 1024px) {
+          #soldpricerange-pie2008mobile { display: none; }   /* hide mobile elsewhere */
         }
 
+        @media screen and (min-width: 0px) and (max-width: 600px) {
+          #soldpricerange-pie2008 { display: none; }  /* hide regular on small screens */
+        }
+        
+        @media screen and (min-width: 601px) and (max-width: 1024px) {
+          #soldpricerange-pie2008 { display: block; }   /* hide it elsewhere */
+        }
+        
 
       </style>
+    -->
     
     
   </head>
@@ -57,7 +65,7 @@
     
     <div class="container">
       <div id="soldpricerange-pie2013"></div>
-      <div id="soldpricerange-pie2013mobile"></div>
+
     </div>
     
     

@@ -57,7 +57,10 @@ $(document).ready(function () {
 //	    y: 65
 //        },
         title: {
-            text: '2003'
+            text: '2003',
+	    style: {
+		color: '#FF6839'
+	    }
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -105,7 +108,10 @@ $(document).ready(function () {
             plotShadow: false
         },
         title: {
-            text: '2008'
+            text: '2008',
+	    style: {
+		color: '#FF6839'
+	    }
         },
 //	legend: {
 //	    align: 'left',
@@ -161,7 +167,9 @@ $(document).ready(function () {
         },
         title: {
             text: '2013',
-            color: 'orange'
+	    style: {
+		color: '#FF6839'
+	    }
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
