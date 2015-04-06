@@ -37,7 +37,7 @@ $(document).ready(function() { //runs the function
             type: 'line'
             },
         title: {
-            text: 'Average Square Feet'
+            text: ''
             },
         xAxis: {
             categories: year

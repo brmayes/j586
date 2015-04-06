@@ -89,7 +89,7 @@
   }
   
   .subscribe {
-    background-color: black;
+    background-color: #242424;
     padding: 10px 0 0 2px;
   }
   
@@ -272,12 +272,9 @@
 
 /* PRICE PER SQ FT */
 .pricepersqft {
-  margin-top: 130px;
+  margin-top: 100px;
 }
 
-.pricepersqft-copy {
-  padding-top: 125px;
-}
 
 .icons {
   width: 115px;
@@ -285,4 +282,96 @@
 
 .subheaders {
   display: inline;
+}
+
+/*FOOTER */
+.backToTop {
+  width: 100px;
+  padding: 50px 0;
+}
+
+.backToToplink {
+  background-color: #FF6839;
+  width: 100px;
+  height: 100px;
+}
+
+.backToToplink:hover {
+  background-color: #242424;
+}
+
+.toparrow {
+  width: 100px;
+}
+
+a.backToToplink {
+  height: 100px;
+}
+
+.btt {
+  background-color: #FF6839;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.btt:hover {
+  background-color: #242424;
+}
+
+.category-footer {
+  background-color: #242424;
+  min-height: 100px;
+}
+
+.bottom-categories {
+  height: 40px;
+  font-family: Oswald;
+  font-weight: 200;
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 8px;
+  color: white;
+  padding-left: 22px;
+}
+
+.bottom-categoriescontainer {
+  padding-top: 38px;
+}
+
+.bottom-categories:hover {
+  color: #b3b3b3;
+}
+
+.bottom {
+  background-color: #3c3c3c;
+  color: #b3b3b3;
+  min-height: 150px;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.social-media {
+  border-radius: 5px;
+}
+
+.social-media-icons {
+  width: 45px;
+  height: auto;
+}
+
+.socialmedia-div {
+  margin: 5px 0 25px 0;
+}
+
+.connect {
+  height: 40px;
+  font-family: Oswald;
+  font-weight: 200;
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 8px;
+  color: white;
 }

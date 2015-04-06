@@ -43,7 +43,7 @@ $(document).ready(function() { //runs the function
 		type: 'column'
 		},
 		title: {
-		    text: 'Breakdown of Price Per Square Foot'
+		    text: ''
 		},
 		xAxis: {
 		    categories: yearASF,

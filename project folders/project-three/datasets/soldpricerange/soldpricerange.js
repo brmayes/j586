@@ -55,7 +55,7 @@ $(document).ready(function () {
 	    y: 65
         },
         title: {
-            text: 'Number of New Single-Family Houses Sold by Sales Price Range, 2003' 
+            text: '2003' 
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -103,7 +103,7 @@ $(document).ready(function () {
             plotShadow: false
         },
         title: {
-            text: 'Number of New Single-Family Houses Sold by Sales Price Range, 2008'
+            text: '2008'
         },
 	legend: {
 	    align: 'left',
@@ -158,7 +158,7 @@ $(document).ready(function () {
             plotShadow: false
         },
         title: {
-            text: 'Number of New Single-Family Houses Sold by Sales Price Range, 2013'
+            text: '2013'
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
