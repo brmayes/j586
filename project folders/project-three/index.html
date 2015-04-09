@@ -13,7 +13,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="http://code.highcharts.com/highcharts.js"></script>
-    <script src="assets/additionalgraphics/quickfacts.js"></script>
     <script type="text/javascript" src="js/weather.js"></script>
     
     <!-- CSS -->
@@ -32,10 +31,45 @@
     <script type="text/javascript" src="js/dist/js/jquery.mmenu.min.all.js"></script>
     <script type="text/javascript" src="js/dist/js/slidermenu.js"></script>
     
+    <!--pie char toggle-->
+    <script>
+      $(function () {
+        $('#tabs-container div').hide().eq(0).show();
+        $('#tabs-container-2 div').hide().eq(0).show();
+        $('#tabs-container-2 div').hide().eq(0).show();
+        
+        $('#tabs div').click(function () {
+          $('#tabs-container div').hide()
+          $('#tabs-container-2 div').hide()
+          $('#tabs-container-3 div').hide()
+          num = $('#tabs div').index(this);
+          $('#tabs-container div').hide().eq(num).show();
+          $('#tabs-container-2 div').hide().eq(num).show();
+          $('#tabs-container-3 div').hide().eq(num).show();
+        });
+      });
+    </script>
+    
+    
     <!-- highcharts-->
     <script src="datasets/avqsqft/avgsqft-script.js"></script>
     <script src="datasets/soldpricerange/soldpricerange.js"></script>
-    <script src="datasets/soldpricerange/soldpricerange-trial.js"></script>
+    <script src="datasets/soldpricerange/soldpricerange-mobile.js"></script>
+    <script src="datasets/pricepersqft/pricepersqft-script.js"></script>
+    
+    <!--data table-->
+    <link rel="stylesheet" type="text/css" href="datasets/datatable/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/1.0.5/css/dataTables.responsive.css">
+    <script type="text/javascript" language="javascript" src="datasets/datatable/jquery.dataTables.js"></script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/1.0.5/js/dataTables.responsive.js"></script>
+    <script type="text/javascript" language="javascript" class="init">
+      $(document).ready(function() {
+        $('#example').dataTable( {
+          "ajax": "datasets/datatable/dataSet.txt",
+          responsive: true
+        } );
+      } );
+    </script>
   </head>
   
   
@@ -97,7 +131,7 @@
       <!--top navigation-->
       <div class="row navdiv visible-md visible-lg">
         <div class="col-md-7 nav">
-          <div class="row">
+          <div class="row topnav-style">
             <div class="col-md-3 oswald-bold">
               <p class="navbar-date"><span id="month"></span> <span id="day"></span>, <span id="years"></span></p>
             </div>
@@ -157,8 +191,8 @@
         </div>
         <div class="col-md-1 categories-nav categories-nav-articles">
           <a class="articlecount" href="#">
-          <img class="articlecount-style" alt="article" src="assets/articlecount-orange.png" />
-          <img class="articlecount-style" alt="article" src="assets/articlecount-black.png" />
+            <img class="articlecount-style" alt="article" src="assets/articlecount-orange.png" />
+            <img class="articlecount-style" alt="article" src="assets/articlecount-black.png" />
           </a>
         </div>
       </div>
@@ -170,28 +204,168 @@
       
       <div class="row">
         <div class="col-md-12">
-            <div class="header-information">
-                <h1 class="title">Pricing Statistics of New Housing Over Time</h1>
-                <h3 class="lightgray content-padding-heading oswald-bold subtitle">The evolution of the prices of houses on the market nationally and by region</h3>
-                <h5 class="content-padding-heading">By <span class="orange">Brittany Renee Mayes</span> April 1, 2015</h5>
-            </div>
-            <div id="avgsqft-linechart"></div>
-                <div class="row">
-                    <div class="col-md-8">
-                        <h3 class="oswald-bold black">Number of New Single-Family Houses Sold by Sales Price Range by Year</h3>
-                        <div id="soldpricerange-pie2003"></div>
-                        <div id="soldpricerange-pie2008"></div>
-                        <div id="soldpricerange-pie2013"></div>
+          <div class="header-information">
+              <h1 class="title">Pricing Statistics of New Housing Over Time</h1>
+              <h3 class="lightgray content-padding-heading oswald-bold subtitle">The evolution of the prices of houses on the market nationally and by region</h3>
+              <h5 class="content-padding-heading">By <span class="orange">Brittany Renee Mayes</span> April 1, 2015</h5>
+          </div>
+          
+          
+          <!--PIE CHARTS: NO. OF HOUSES SOLD BY PRICE RANGE-->
+          <div class="row section-piechart">
+            <h3>Comparison of the New Single-Family Houses Sold Nationally by Price Range</h3>
+            <div class="col-md-4 "> 
+                <div class="row tab-margin" id="tabs" >
+                  <div class="year-tabs centerdiv col-md-4 col-xs-4"><button href="#">2003</button></div>
+                  <div class="year-tabs centerdiv middle-button col-md-4 col-xs-4"><button href="#">2008</button></div>
+                  <div class="year-tabs centerdiv col-md-4 col-xs-4"><button href="#">2013</button></div>
+              </div>
+ 
+
+              <div class="tabs-info">
+                <p>
+                  The pie graphs show the number of new single-family homes sold nationally by sales price range in 2003, 2008, and 2013.
+                  Over this ten year timespan, the prices of housing has increased and thus there is a steady showing of more expensive
+                  houses being sold.
+                  <span class="subtext">*Numbers may not equal 100% due to rounding.</span>
+                </p>
+                <div id="tabs-container">
+                    <div id="content1">
+                      In 2003, houses under $149,999 dictated a quarter of the houses that were sold. Additionally, the next price range,
+                      $150,000 to $199,999 was the second largest category with just under a quarter of houses being sold. 
                     </div>
-                    <div class="col-md-4">
-                        THIS IS WHERE I WILL INSERT TEXT
+                    <div id="content2">
+                      In 2008, the $150,000 to $199,999 price range took over as the leader of number of houses being sold in that range despite
+                      dropping to just over 21%. The under $149,999 dropped to thrid place after the $200,000 to $249,999 price range. This increase
+                      shows the progression of housing prices due to the fact that the distribution of houses sold increased in every category over
+                      the $150,000 to $199,999 price range.
                     </div>
-                  <!--example of dual legend
-                    <div id="HouseChart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-                    <div id="PeopleChart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>-->
+                    <div id="content3">
+                      In 2013, the under $149,999 dropped to the lowest number of houses being sold. There was an increase in distribution between ever other
+                      category. There is a drastic shift between 2003 where the lowest two categories shifted from being half of the total houses sold to
+                      2013 where the same two categories equaled just over a quarter of the houses sold. 
+                    </div>
                 </div>
+              </div>
             </div>
+      
+            <div class="col-md-8 chart">
+              <div id="tabs-container-2">
+                <div id="content1-2">
+                  <iframe src="pie2003.html" class="hidden-xs hidden-sm"></iframe>
+                  <iframe src="pie2003-mobile.html" class="visible-xs visible-sm"></iframe>
+                </div>
+                <div id="content2-2">
+                  <iframe src="pie2008.html" class="hidden-xs hidden-sm"></iframe>
+                  <iframe src="pie2008-mobile.html" class="visible-xs visible-sm"></iframe>
+                </div>
+                <div>
+                  <iframe src="pie2013.html" class="hidden-xs hidden-sm"></iframe>
+                  <iframe src="pie2013-mobile.html" class="visible-xs visible-sm"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="avgsqft">
+            <h3>Yearly Average Square Feet of New Single-Family Homes Nationally and by Region</h3>
+            <p>
+              Prices of real estate in the United States are rising due to several reasons. The first of which includes the size of the house being built. As shown below, nationally
+              between 1973 and 2013, there was over an 150% increase in average square foot per year. 
+            </p>
+            <div id="avgsqft-linechart"></div>
+          </div>
+        
+          <div class="pricepersqft">
+            <h3>Breakdown of Price Per Square Foot</h3>
+            <div class="row">
+              <div class="col-md-4 col-xs-12">
+                <p class="pricepersqft-copy">
+                  In addition to the amount of square footage per house, the amount home buyers paid per square foot increased steadily. In 2003, nearly half of houses were valued at
+                  less than $69.99 per square foot. In juxtaposition, that number decreased by 15% in just five years time and continued to drop another six percent by 2013.
+                </p>
+              </div>
+              <div class="col-md-8 col-xs-12">
+                <div id="pricepersqft"></div>
+              </div>
+            </div>
+          </div>
+
+        
+        
+        <!--data table-->
+        <div class="dt-example">
+          <h3>Number of Houses Sold in the US by Year from 1999 to 2013</h3>
+          <section class="datatable">
+            <table id="example" class="display" cellspacing="0" width="100%">
+              <thead>
+                <tr>
+                  <th>Year</th>
+                  <th>Avg. Sales Price</th>
+                  <th>United States (total)</th>
+                  <th>Northeast</th>
+                  <th>Midwest</th>
+                  <th>South</th>
+                  <th>West</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th>Year</th>
+                  <th>Avg. Sales Price</th>
+                  <th>United States (total)</th>
+                  <th>Northeast</th>
+                  <th>Midwest</th>
+                  <th>South</th>
+                  <th>West</th>
+                </tr>
+              </tfoot>
+            </table>
+          </section>
+          <p>*No. of houses sold in thousands</p>
         </div>
+        </div>
+      </div>
+    
+    <div class="backToTop centerdiv">
+      <a class="backToToplink " href="#top">
+        <div class="btt centerdiv">
+          <img class="toparrow" alt="toparrow" src="assets/arrow.png" />
+        </div>
+      </a>
+    </div>
+    
+    </div>
+    
+    
+    <div class="category-footer">
+      <div class="container bottom-categoriescontainer">
+          <a class="bottom-categories">News</a>
+          <a class="bottom-categories">Sports</a>
+          <a class="bottom-categories">Business</a>
+          <a class="bottom-categories">Entertainment</a>
+          <a class="bottom-categories">U-T TV</a>
+          <a class="bottom-categories">U-T Video</a>
+          <a class="bottom-categories">Military</a>
+          <a class="bottom-categories">Opinion</a>
+          <a class="bottom-categories">U-T Offers</a>
+          <a class="bottom-categories">Classifieds</a>
+          <a class="bottom-categories">Real Estate</a>
+          <a class="bottom-categories">Cars</a>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="container">
+        <span class="connect">CONNECT WITH US</span>
+        <div class="socialmedia-div">
+          <a href="http://www.facebook.com/utsandiego" class="social-media"><img class="social-media-icons" src="assets/facebook.png"></a>
+          <a href="http://www.twitter.com/utsandiego" class="social-media"><img class="social-media-icons" src="assets/twitter.png"></a>
+          <a href="http://pinterest.com/utsandiegodeals" class="social-media"><img class="social-media-icons" src="assets/pinterest.png"></a>
+          <a href="http://www.youtube.com/user/utsandiego" class="social-media"><img class="social-media-icons" src="assets/youtube.png"></a>
+        </div>
+        
+        <p>&copy; 2015 Brittany Renee Mayes, LLC | A 586 Project | All Rights Reserved | 60 Basement of Carroll, 27599</p>
+      </div>
     </div>
     
     

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<pricepersqft>
+ 
+
+    <Row name="2003">
+    <Year>2003</Year>
+    <under69>471</under69>
+    <range70to79>173</range70to79>
+    <range80to89>139</range80to89>
+    <range90to99>97</range90to99>
+    <range100to124>131</range100to124>
+    <range125andover>76</range125andover>
+    </Row>
+
+
+    <Row name="2008">
+    <Year>2008</Year>
+    <under69>136</under69>
+    <range70to79>78</range70to79>
+    <range80to89>72</range80to89>
+    <range90to99>60</range90to99>
+    <range100to124>79</range100to124>
+    <range125andover>60</range125andover>
+    </Row>
+    
+
+    <Row name="2013">
+    <Year>2013</Year>
+    <under69>94</under69>
+    <range70to79>65</range70to79>
+    <range80to89>62</range80to89>
+    <range90to99>53</range90to99>
+    <range100to124>91</range100to124>
+    <range125andover>66</range125andover>
+    </Row>
+
+</pricepersqft>

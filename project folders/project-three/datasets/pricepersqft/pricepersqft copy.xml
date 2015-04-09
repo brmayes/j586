@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<pricepersqft>
+ 
+
+    <Row name="2003">
+    <Year>2003</Year>
+    <under60>272</under60>
+    <range60to69>199</range60to69>
+    <range70to79>173</range70to79>
+    <range80to89>139</range80to89>
+    <range90to99>97</range90to99>
+    <range100to124>131</range100to124>
+    <range125to149>45</range125to149>
+    <range150andover>31</range150andover>
+    </Row>
+    
+
+    <Row name="2004">
+    <Year>2004</Year>
+    <under60>253</under60>
+    <range60to69>174</range60to69>
+    <range70to79>173</range70to79>
+    <range80to89>165</range80to89>
+    <range90to99>122</range90to99>
+    <range100to124>179</range100to124>
+    <range125to149>81</range125to149>
+    <range150andover>57</range150andover>
+    </Row>
+    
+
+    <Row name="2005">
+    <Year>2005</Year>
+    <under60>215</under60>
+    <range60to69>158</range60to69>
+    <range70to79>175</range70to79>
+    <range80to89>157</range80to89>
+    <range90to99>139</range90to99>
+    <range100to124>230</range100to124>
+    <range125to149>108</range125to149>
+    <range150andover>99</range150andover>
+    </Row>
+    
+
+    <Row name="2006">
+    <Year>2006</Year>
+    <under60>153</under60>
+    <range60to69>121</range60to69>
+    <range70to79>141</range70to79>
+    <range80to89>137</range80to89>
+    <range90to99>116</range90to99>
+    <range100to124>217</range100to124>
+    <range125to149>87</range125to149>
+    <range150andover>78</range150andover>
+    </Row>
+    
+
+    <Row name="2007">
+    <Year>2007</Year>
+    <under60>109</under60>
+    <range60to69>89</range60to69>
+    <range70to79>116</range70to79>
+    <range80to89>102</range80to89>
+    <range90to99>89</range90to99>
+    <range100to124>151</range100to124>
+    <range125to149>60</range125to149>
+    <range150andover>59</range150andover>
+    </Row>
+    
+
+    <Row name="2008">
+    <Year>2008</Year>
+    <under60>72</under60>
+    <range60to69>64</range60to69>
+    <range70to79>78</range70to79>
+    <range80to89>72</range80to89>
+    <range90to99>60</range90to99>
+    <range100to124>79</range100to124>
+    <range125to149>28</range125to149>
+    <range150andover>32</range150andover>
+    </Row>
+    
+
+    <Row name="2009">
+    <Year>2009</Year>
+    <under60>66</under60>
+    <range60to69>56</range60to69>
+    <range70to79>64</range70to79>
+    <range80to89>56</range80to89>
+    <range90to99>41</range90to99>
+    <range100to124>56</range100to124>
+    <range125to149>18</range125to149>
+    <range150andover>19</range150andover>
+    </Row>
+    
+
+    <Row name="2010">
+    <Year>2010</Year>
+    <under60>58</under60>
+    <range60to69>48</range60to69>
+    <range70to79>60</range70to79>
+    <range80to89>50</range80to89>
+    <range90to99>31</range90to99>
+    <range100to124>42</range100to124>
+    <range125to149>17</range125to149>
+    <range150andover>16</range150andover>
+    </Row>
+    
+
+    <Row name="2011">
+    <Year>2011</Year>
+    <under60>54</under60>
+    <range60to69>47</range60to69>
+    <range70to79>59</range70to79>
+    <range80to89>43</range80to89>
+    <range90to99>31</range90to99>
+    <range100to124>43</range100to124>
+    <range125to149>16</range125to149>
+    <range150andover>14</range150andover>
+    </Row>
+    
+
+    <Row name="2012">
+    <Year>2012</Year>
+    <under60>52</under60>
+    <range60to69>57</range60to69>
+    <range70to79>63</range70to79>
+    <range80to89>55</range80to89>
+    <range90to99>39</range90to99>
+    <range100to124>62</range100to124>
+    <range125to149>24</range125to149>
+    <range150andover>16</range150andover>
+    </Row>
+    
+
+    <Row name="2013">
+    <Year>2013</Year>
+    <under60>44</under60>
+    <range60to69>50</range60to69>
+    <range70to79>65</range70to79>
+    <range80to89>62</range80to89>
+    <range90to99>53</range90to99>
+    <range100to124>91</range100to124>
+    <range125to149>35</range125to149>
+    <range150andover>31</range150andover>
+    </Row>
+
+</pricepersqft>

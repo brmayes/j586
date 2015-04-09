@@ -1,5 +1,7 @@
 $(document).ready(function () {
     
+    //document.ready(console.log("Ready!"));
+    
     /* PIE CHART THEME */
     Highcharts.theme = {
        /* LINE/BAR/COLUMN/SLICE COLORS - only used for slices for Plex, if we add multiple data sets in future releases, these colors will work with the rendering of other sets */
@@ -17,7 +19,7 @@ $(document).ready(function () {
        subtitle: {
 	  style: {
 	     color: '#666666',
-	     font: '12px "Oswald", Helvetica, Arial, sans-serif'
+	     font: '12px "Lucida Grande", Helvetica, Arial, sans-serif'
 	  }
        },
 	
@@ -39,7 +41,7 @@ $(document).ready(function () {
 //BEGINNING OF CREATING PIE GRAPHS
     
     
-    $('#soldpricerange-pie2003').highcharts({
+    $('#soldpricerange-pie2003mobile').highcharts({
 	
 	//colors: ['#00000;'],
         chart: {
@@ -47,15 +49,15 @@ $(document).ready(function () {
             plotBorderWidth: null,
             plotShadow: false
         },
-	legend: {
-	    align: 'left',
-	    verticalAlign: 'top',
-	    layout: 'vertical',
-	    x:  55,
-	    y: 65
-        },
+//	legend: {
+//	    align: 'left',
+//	    verticalAlign: 'top',
+//	    layout: 'vertical',
+//	    x:  55,
+//	    y: 65
+//        },
         title: {
-            text: '2003' ,
+            text: '2003',
 	    style: {
 		color: '#FF6839'
 	    }
@@ -99,7 +101,7 @@ $(document).ready(function () {
     
     
     
-    $('#soldpricerange-pie2008').highcharts({
+    $('#soldpricerange-pie2008mobile').highcharts({
         chart: {
             plotBackgroundColor: null,
             plotBorderWidth: null,
@@ -111,13 +113,13 @@ $(document).ready(function () {
 		color: '#FF6839'
 	    }
         },
-	legend: {
-	    align: 'left',
-	    verticalAlign: 'top',
-	    layout: 'vertical',
-	    x:  55,
-	    y: 65
-        },
+//	legend: {
+//	    align: 'left',
+//	    verticalAlign: 'top',
+//	    layout: 'vertical',
+//	    x:  55,
+//	    y: 65
+//        },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
         },
@@ -157,7 +159,7 @@ $(document).ready(function () {
     
     
     
-    $('#soldpricerange-pie2013').highcharts({
+    $('#soldpricerange-pie2013mobile').highcharts({
 	chart: {
             plotBackgroundColor: null,
             plotBorderWidth: null,
@@ -173,13 +175,13 @@ $(document).ready(function () {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
 	    
         },
-	legend: {
-	    align: 'left',
-	    verticalAlign: 'top',
-	    layout: 'vertical',
-	    x:  55,
-	    y: 65
-        },
+//	legend: {
+//	    align: 'left',
+//	    verticalAlign: 'top',
+//	    layout: 'vertical',
+//	    x:  55,
+//	    y: 65
+//        },
         plotOptions: {
             pie: {
                 allowPointSelect: true,
