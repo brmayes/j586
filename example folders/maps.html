@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script>
+      
+  var infowindow;
+(function () {
+
+  google.maps.Map.prototype.markers = new Array();
+    
+  google.maps.Map.prototype.addMarker = function(marker) {
+    this.markers[this.markers.length] = marker;
+  };
+    
+  google.maps.Map.prototype.getMarkers = function() {
+    return this.markers
+  };
+    
+  google.maps.Map.prototype.clearMarkers = function() {
+    if(infowindow) {
+      infowindow.close();
+    }
+    
+    for(var i=0; i<this.markers.length; i++){
+      this.markers[i].set_map(null);
+    }
+  };
+})();
+  
+  function initialize() {
+    var latlng = new google.maps.LatLng(50.9406645, 6.9599115);
+    var myOptions = {
+      zoom: 12,
+      center: latlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+      //mapTypeId: google.maps.MapTypeId.SATELLITE
+    };
+    map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+    
+    var a = new Array();
+    var t =  new Object();
+    t.name = "test0"
+    t.lat =  50.9407745
+    t.lng =  6.9599200
+    a[0] = t;
+  
+    var t =  new Object();
+    t.name = "test1"
+    t.lat =  50.9507745
+    t.lng =  6.9699200
+    a[1] = t;
+    
+    var t =  new Object();
+    t.name = "test2"
+    t.lat =  50.9307745
+    t.lng =  6.9499200
+    a[2] = t;
+
+   
+    for (var i = 0; i < a.length; i++) {
+        var latlng = new google.maps.LatLng(a[i].lat, a[i].lng);
+        map.addMarker(createMarker(a[i].name,latlng));
+     }
+    console.log(map.getMarkers());    
+    
+    console.log(map.getMarkers());    
+  }
+  
+  function createMarker(name, latlng) {
+    var marker = new google.maps.Marker({position: latlng, map: map});
+    google.maps.event.addListener(marker, "click", function() {
+      if (infowindow) infowindow.close();
+      infowindow = new google.maps.InfoWindow({content: name});
+      infowindow.open(map, marker);
+    });
+    return marker;
+  }
+      
+    </script>
+    
+    
+    <script> /*
+      
+      var map;
+      function initialize() {
+        
+        //defines markers
+        var myLatlng = {lat: 35.912548, lng: -79.050964};
+        var myLatlng2 = {lat: 35.910797, lng: -79.050535};
+        
+        
+        //map options like zoom, map coordinates, map type
+        var mapOptions = {
+          zoom: 14,
+          center: new google.maps.LatLng(35.912548, -79.050964),
+          mapTypeId: google.maps.MapTypeId.TERRAIN
+        };
+        
+        
+        //assigns map to id
+        map = new google.maps.Map(document.getElementById('map-canvas'),
+          mapOptions);
+        
+        
+        //content for info marker
+        var contentString = '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+          '<div id="bodyContent">'+
+          '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+          'sandstone rock formation in the southern part of the '+
+          'Northern Territory, central Australia.' +
+          '</p>'+
+          '</div>';
+          
+        var polkPlace = '<p>This is polk place.</p>';
+        
+        
+        infoWindow = new google.maps.InfoWindow; //static infoWindow for all your markers
+        google.maps.event.addDomListener(window, 'load', function() {
+          //create your markers here
+          
+          
+          
+          
+          
+          google.maps.event.addListener(marker, 'click', function() {
+            infoWindow.open(map1, marker); //take care with case-sensitiveness
+          });
+        });
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        //makes a variable for an infowindow
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+        
+        var infowindow2 = new google.maps.InfoWindow({
+          content: polkPlace
+        });
+        
+        
+        //builds marker
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title:"Chapel Thrill!"
+        });
+        
+        var marker2 = new google.maps.Marker({
+            position: myLatlng2,
+            map: map,
+            title:"Chapel Thrill!"
+        });
+        
+        //on click marker - must make one event per marker you want clicked
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.open(map,marker);
+        });
+        
+        google.maps.event.addListener(marker2, 'click', function() {
+          infowindow2.open(map,marker2);
+        });
+      
+      //close function
+      }
+      
+      google.maps.event.addDomListener(window, 'load', initialize);
+      */
+    </script>
+  </head>
+  
+  
+  <body>
+    <div id="map_canvas"></div>
+  </body>
+  
+  
+</html>
