@@ -30,7 +30,7 @@ $(function() {
 			$.each(json.data,function(i,data){
 				// html += '<p>Caption:"'+ data.caption.text +'"</p>';
 				html += '<a target="_blank" href="' + data.link + '">'
-				html += '<img src ="' + data.images.low_resolution.url + '">'
+				html += '<img width="50%;" src ="' + data.images.low_resolution.url + '">'
 				html += '</a>'
 			});
 

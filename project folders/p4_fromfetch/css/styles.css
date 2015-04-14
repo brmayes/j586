@@ -1,0 +1,17 @@
+/* General */
+
+.nav {
+    height: 150px;
+    background-color: black;
+    color: white;
+}
+
+.nav-header {
+    color: white;
+    text-align: center;
+    font-family: 'Istok Web';
+    font-weight: 700;
+    font-size: 60px;
+    padding-top: 25px;
+}
+
