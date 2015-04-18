@@ -22,7 +22,7 @@ var infowindow;
   };
 })();
 
-function initialize() {
+function initializeMap() {
 
   // Create an array of styles.
   var styles = [
@@ -49,7 +49,7 @@ function initialize() {
 
   var latlng = new google.maps.LatLng(35.912548, -79.050964);
   var myOptions = {
-    zoom: 14,
+    zoom: 3,
     center: latlng,
     mapTypeId: google.maps.MapTypeId.ROADMAP
     //mapTypeId: google.maps.MapTypeId.SATELLITE
@@ -60,6 +60,7 @@ function initialize() {
   map.setOptions({styles: styles});
 
   var a = new Array();
+
   var t = new Object();
   t.name = "test0"
   t.lat = 35.912548
@@ -80,7 +81,6 @@ function initialize() {
   }
   console.log(map.getMarkers());
 
-  console.log(map.getMarkers());
 }
 
 function createMarker(name, latlng) {
