@@ -5,56 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Twitter API</title>
-  
-  
+
+
   <style>
     .border {
       border-bottom: dotted 1px black;
       padding-bottom: 10px;
       clear: both;
     }
-    
+
     .float-left {
       float: left;
     }
-    
+
     .bold {
       font-weight: 700;
     }
-    
+
     a {
       text-decoration: none;
       color: black;
     }
-    
+
     .handle {
       color: gray;
       font-size: 11px;
     }
-    
+
     .twitter-pic {
       padding-right: 10px;
     }
-    
+
     .name {
-      
+
     }
-    
+
     .font-small {
       font-size: 11px;
     }
-    
+
     .tweet-div {
       clear: both;
       padding: 8px;
       border-bottom: 1px dotted grey;
     }
-    
+
     .twitpic {
       clear: both;
     }
   </style>
-  
+
 </head>
 
 
@@ -104,33 +104,34 @@
   //echo $tweetData . "</br>";
 
 
-  
-  
+
+
   foreach($tweetData['statuses'] as $items)
       {
-        
+
         $userArray = $items['user'];
-        $mediaArray = $items['media'];
-        $date = new DateTime( $tweet->created_at );
-        
-        
+        $mediaArray = $items['media.media_url'];
+        $date = new DateTime( $items->created_at );
+
+        //echo date('M d h:i:s', strtotime($items['created_at']));
         echo "<div class='tweet-div'><div class='float-left twitpic'><a target='_blank' href='http://www.twitter.com/" . $userArray['screen_name'] . "'><img class='twitter-pic' target='_blank' src='" . $userArray['profile_image_url'] . "'></a></div>";
-        echo "<a target='_blank' href='http://www.twitter.com/" . $userArray['screen_name'] . "'><span class='name bold'>" . $userArray['name'] . "</span>   <span class='handle'>@" . $userArray['screen_name'] . "</span></a>  <span class='font-small'>&sdot; ";
+        echo "<a target='_blank' href='http://www.twitter.c om/" . $userArray['screen_name'] . "'><span class='name bold'>" . $userArray['name'] . "</span>   </br><span class='handle'>@" . $userArray['screen_name'] . "</span></a>  <span class='font-small'>&sdot; ";
         echo $date->format( 'M jS' ) . "</span></br>";
         echo $items['text'] . "</br></br>";
         //echo "At: " . $items['created_at'] . "</br>";
         //echo "<img target='_blank' src='http://" . $mediaArray['media_url'] . "'></br></br>";
         //echo $mediaArray['media_url'] . "";
         echo "<span class='border'></span></div>";
+        //echo $mediaArray['media_url'] . "<p>this is media array</p>";
       }
 
-      
-      
-      
- /*echo $twitter->setGetfield($getfield)
-               ->buildOauth($url, $requestMethod)
-               ->performRequest();*/
-    
+
+
+
+  //echo $twitter->setGetfield($getfield)
+    //           ->buildOauth($url, $requestMethod)
+      //         ->performRequest(); 
+
   ?>
 </body>
 

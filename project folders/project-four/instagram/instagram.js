@@ -13,7 +13,7 @@ $(function() {
 	var apiurl = "https://api.instagram.com/v1/tags/blacklivesmatter/media/recent?access_token=26533789.aba575d.fa5050cc779741628bd2fbaab4dc3e85&callback=?"
 	var apiselfinsta = "https://api.instagram.com/v1/users/26533789?access_token=26533789.1fb234f.b64427167302446a8867ac168a944e3b &callback=?"
 	var access_token = location.hash.split('=')[1];
-	var html = ""
+	var html = "";
 
 		$.ajax({
 			type: "GET",
@@ -30,12 +30,12 @@ $(function() {
 			$.each(json.data,function(i,data){
 				// html += '<p>Caption:"'+ data.caption.text +'"</p>';
 				html += '<a target="_blank" href="' + data.link + '">'
-				html += '<img src ="' + data.images.low_resolution.url + '">'
+				html += '<img width="50%;" src ="' + data.images.low_resolution.url + '">'
 				html += '</a>'
 			});
 
-			console.log(html);
-			$("#results").append(html);
+			//console.log(html);
+			$('#results').append(html);
 
 		}
 

@@ -9,43 +9,52 @@
     <!-- Scripts -->
     <script src="http://codeorigin.jquery.com/jquery-2.0.3.min.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <link href='http://fonts.googleapis.com/css?family=Istok+Web:400,700,400italic,700italic|Anton|Muli:300,400,300italic,400italic|PT+Sans+Caption:400,700' rel='stylesheet' type='text/css'>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
 
-    <!-- Instagram -->
-    <script src="instagram.js" type="text/javascript"></script>
+    <!-- API scripts -->
+    <script src="instagram/instagram.js" type="text/javascript"></script>
+    <script src="flikr/flikr.js" type="text/javascript"></script>
+    <script src="google-maps/maps.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+    <!--[if lt IE 9] -->
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    
-    
+    <!--[endif]-->
   </head>
 
 
-  <body>
+  <body onload="initialize()">
+      <div class="row">
+        <div class="col-md-12 nav">
+          <h1 class="nav-header">#BlackLivesMatter</h1>
+
+        </div>
+      </div>
     <div class="container">
       <div class="row">
-        <div class="col-md-12">
-          <div class="col-md-8">
-            <p>
-              Hello
-            </p>
+        <div class="col-md-8">
+
+          <div>
+            <div id="map_canvas" style="width:50%; height:240px;float:left;"></div>
+            <br style="clear: both;"/>
+            <button onclick="map.clearMarkers();">clear</button><br />
           </div>
-          <div class="col-md-4">
-            <div id="results"></div>
-            <iframe src="twitter/index.php" style="border:0px #FFFFFF none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="60px" width="468px"></iframe>
-          </div>
+
+          <!-- <iframe src="twitter/index.php" style="border:0px #FFFFFF none;" name="twitter api" scrolling="yes" frameborder="1" marginheight="10px" marginwidth="0px" height="500px" width="300px;"></iframe> -->
+          <div id="flikrfeed"></div>
+        </div>
+        <div class="col-md-4">
+          <div id="results"></div>
         </div>
       </div>
     </div>
-
-
 
 
   </body>
