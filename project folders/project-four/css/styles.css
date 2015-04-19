@@ -2,7 +2,7 @@
 
 .nav {
   height: 150px;
-  background-color: black;
+  background-color: #2B2B2B;
   color: white;
 }
 
@@ -23,6 +23,6 @@
 }
 
 #map-trial {
-  height: 400px;
-  width: 400px;
+  height: 485px;
+  width: 100%;
 }
