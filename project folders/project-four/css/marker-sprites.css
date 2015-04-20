@@ -1,0 +1,76 @@
+.redMarker, .tealMarker, .orangeMarker, .blueMarker, .purpleMarker, .greenMarker{
+	background: url(marker-sprites.png) no-repeat;
+}
+
+.redMarker{
+	background-position: -49px 0;
+	width: 37px;
+	height: 62px;
+	zoom:0.5;
+	-moz-transform:scale(0.5);
+	-moz-transform-origin: 0 0;
+	display: inline-block;
+	position: absolute;
+	left: 0px;
+	top: 4px;
+}
+
+.tealMarker{
+	background-position: -99px 0;
+	width: 37px;
+	height: 62px;
+	zoom:0.5;
+	-moz-transform:scale(0.5);
+	-moz-transform-origin: 0 0;
+	position: absolute;
+	left: 0px;
+	top: 4px;
+}
+
+.orangeMarker{
+	background-position: -198px 0;
+	width: 37px;
+	height: 62px;
+	zoom:0.5;
+	-moz-transform:scale(0.5);
+	-moz-transform-origin: 0 0;
+	position: absolute;
+	left: 0px;
+	top: 4px;
+}
+
+.blueMarker{
+	background-position: -149px 0;
+	width: 37px;
+	height: 62px;
+	zoom:0.5;
+	-moz-transform:scale(0.5);
+	-moz-transform-origin: 0 0;
+	position: absolute;
+	left: 0px;
+	top: 4px;
+}
+
+.purpleMarker{
+	background-position: -248px 0;
+	width: 37px;
+	height: 62px;
+	zoom:0.5;
+	-moz-transform:scale(0.5);
+	-moz-transform-origin: 0 0;
+	position: absolute;
+	left: 0px;
+	top: 4px;
+}
+
+.greenMarker{
+	background-position: 0 0;
+	width: 37px;
+	height: 62px;
+	zoom:0.5;
+	-moz-transform:scale(0.5);
+	-moz-transform-origin: 0 0;
+	position: absolute;
+	left: 0px;
+	top: 4px;
+}

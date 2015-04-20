@@ -1,20 +1,41 @@
 /* General */
 
-.nav {
-  height: 150px;
-  background-color: #2B2B2B;
-  color: white;
+body {
+  margin:0 10px;
 }
+
+.nav {
+  height: 220px;
+  color: white;
+  background-color: #2B2B2B;
+}
+
+
+.header-text {
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+
+}
+
+
+.nav-background {
+  height: 200px;
+  margin-top:-20px;
+}
+
 
 .nav-header {
   color: white;
   text-align: center;
   font-family: 'Istok Web';
   font-weight: 700;
-  font-size: 60px;
+  font-size: 3vm;
   padding-top: 25px;
   margin-bottom: 0;
 }
+
 
 .nav-subhead {
   text-align: center;
@@ -22,7 +43,60 @@
   margin-top: 0;
 }
 
-#map-trial {
-  height: 485px;
+.opening {
+  padding: 0;
+}
+
+
+#map {
   width: 100%;
+  height: 550px;
+  margin-bottom: 15px;
+}
+
+#map-small {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 15px;
+}
+
+.profiles {
+  float: left;
+  width: 40%;
+  padding: 0 10px 0 0;
+}
+
+.caps {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+.causes {
+  /*width: 150px;*/
+  height: 62px;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid black;
+}
+
+div .row-buttons {
+  margin: 5px 12px;
+  text-align: center;
+}
+
+button {
+  font-family: 'Montserrat', sans-serif;
+  background-color: white;
+  border: white;
+  width: 100%;
+  height: 40px;
+  font-size: 12px;
+}
+
+.col-md-2, .col-xs-6 {
+  padding: 0 5px;
 }

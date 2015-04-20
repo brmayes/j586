@@ -27,15 +27,20 @@ $(function() {
 		function parseData(json){
 			console.log(json);
 
-			$.each(json.data,function(i,data){
-				// html += '<p>Caption:"'+ data.caption.text +'"</p>';
-				html += '<a target="_blank" href="' + data.link + '">'
-				html += '<img width="50%;" src ="' + data.images.low_resolution.url + '">'
-				html += '</a>'
-			});
+			var i = 0;
+
+				$.each(json.data,function(i,data){
+					if (i < 20) {
+
+						// html += '<p>Caption:"'+ data.caption.text +'"</p>';
+						html += '<a target="_blank" href="' + data.link + '">'
+						html += '<img width="5%;" src ="' + data.images.low_resolution.url + '">'
+						html += '</a>'
+					}
+				});
 
 			//console.log(html);
-			$('#results').append(html);
+			$('#instagram').append(html);
 
 		}
 
