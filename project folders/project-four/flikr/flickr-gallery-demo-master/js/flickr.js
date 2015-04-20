@@ -3,6 +3,7 @@
 
    var apiKey = 'f6e46042195f7a66080eed2cdf390860';
    var apiURL = 'https://api.flickr.com/services/rest/';
+   //http://api.flickr.com/services/feeds/photos_public.gne?tags=blacklivesmatter&tagmode=any&format=json&jsoncallback=?
 
    function searchText(parameters) {
       var requestParameters = Utility.extend(parameters, {
