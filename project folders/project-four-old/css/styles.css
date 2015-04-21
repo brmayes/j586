@@ -1,0 +1,195 @@
+/* General */
+
+body {
+  margin:0 10px;
+  font-family: 'Roboto';
+}
+
+.row-nomargin {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.nav {
+  height: 150px;
+  color: white;
+  background-color: #2B2B2B;
+}
+
+
+.header-text {
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  padding-left: 25px;
+}
+
+
+.nav-background {
+  height: 150px;
+  margin-top:-20px;
+}
+
+
+.nav-header {
+  color: white;
+  text-align: center;
+  font-family: 'Iron & Brine';
+  font-weight: 700;
+  font-size: 3vm;
+  padding-top: 20px;
+  margin-bottom: 0;
+}
+
+
+.nav-subhead {
+  text-align: center;
+  font-family: 'Roboto';
+  margin-top: 0;
+  font-weight: 300;
+}
+
+.opening {
+  padding: 15px 0;
+  font-size: 16px;
+}
+
+
+#map {
+  width: 100%;
+  height: 512px;
+  margin-bottom: 15px;
+}
+
+#map-small {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 15px;
+}
+
+.profiles {
+  float: left;
+  width: 40%;
+  padding: 0 10px 0 0;
+  max-width: 120px;
+}
+
+.caps {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+.causes {
+  /*width: 150px;*/
+  height: 62px;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid black;
+}
+
+div .row-buttons {
+  margin: 5px 12px;
+  text-align: center;
+}
+
+button {
+  font-family: 'Montserrat', sans-serif;
+  background-color: white;
+  border: white;
+  width: 100%;
+  height: 40px;
+  font-size: 12px;
+}
+
+.col-md-2, .col-xs-6 {
+  padding: 0 5px;
+}
+
+/* INSTRAGRAM STYLES */
+
+#instagram {
+  max-width: 320px;
+  max-height: 450px;
+  overflow-y: auto;
+  overflow-x: none;
+  margin: 0 auto;
+  display: block;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  margin-bottom: 25px;
+}
+
+.instagram-content {
+  max-width: 320px;
+}
+
+.instagram-header {
+  background: #2E5E86;
+  height: 50px;
+}
+
+.instagram-headertext {
+  font-family: 'billabong';
+  font-size: 35px;
+  color: white;
+  letter-spacing: 1.5px;
+  text-align: center;
+  padding-top: 7px;
+}
+
+.instagram-profilepictures {
+  border-radius: 50%;
+  display: inline-block;
+  float: left;
+  margin-left: -5px;
+}
+
+.instagram-username {
+  display: inline-block;
+}
+
+.instagram-username-div {
+  margin-top: 8px;
+  padding-left: 5px;
+}
+
+.instagram-date-div {
+  margin-top: -6px;
+}
+
+.instagram-username-caption {
+  display: inline;
+  margin-left: -10px;
+  margin-right: 5px;
+}
+
+.instagram-caption-div {
+  margin: 0 10px 0 10px;
+}
+
+.instagram-image {
+  max-width: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+}
+
+.instagram-loop {
+  margin: 25px 0;
+}
+
+.instagram-caption {
+  margin: 0 10px 10px 10px;
+}
+
+.col2insta {
+  padding-left: 15px;
+  padding-right: 15px;
+}

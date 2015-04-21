@@ -1,0 +1,60 @@
+/* General */
+
+.nav {
+  height: 220px;
+  color: white;
+}
+
+#instagram {
+  /*position: absolute;*/
+  max-height: 220px;
+}
+
+.header-text {
+  position: relative;
+  height: 100%;
+  margin-top:-195px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  width: 50%;
+}
+
+.nav-backround {
+  position: relative;
+  background-color: #2B2B2B;
+  /*opacity:0.6;
+  filter:alpha(opacity=60); /* For IE8 and earlier */*/
+  height: 200px;
+  /*margin-top:-20px;*/
+}
+
+/*.nav-backround:hover, .header-text:hover {
+  position: relative;
+  background-color: #000;
+  opacity:0;
+  filter:alpha(opacity=0); /* For IE8 and earlier
+}*/
+
+.nav-header {
+  color: white;
+  text-align: center;
+  font-family: 'Istok Web';
+  font-weight: 700;
+  font-size: 3vm;
+  padding-top: 25px;
+  margin-bottom: 0;
+}
+
+
+
+.nav-subhead {
+  text-align: center;
+  font-family: 'Istok Web';
+  margin-top: 0;
+}
+
+#map-trial {
+  height: 485px;
+  width: 100%;
+}

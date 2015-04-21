@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Under Five Mortality</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script>
+          $(document).ready(function(){
+            $('.showSingle').click(function(){
+                  $('.targetPerson').hide();
+                  $('#div'+$(this).attr('target')).show();
+            });
+          });
+  </script>
+</head>
+
+<body>
+  <div class="container">
+
+
+    </p>
+      <div class="causes-buttons">
+        <div class="hidden-xs hidden-sm">
+          <div class="row">
+            <div class="col-md-2 alldiv"><button target="1" class="showSingle">Trayvon Martin</button></div>
+            <div class="col-md-2"><button target="2" class="showSingle">Michael Brown</button></div>
+            <div class="col-md-2"><button target="3" class="showSingle">Tamir Rice</button></div>
+            <div class="col-md-2"><button target="4" class="showSingle">Eric Garner</button></div>
+            <div class="col-md-2"><button target="5" class="showSingle">Walter L. Scott</button></div>
+            <div class="col-md-2"><button target="6" class="showSingle">Eric Courtney Harris</button></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg-images hidden-xs visible-xl">
+        <div id="div1" class="targetPerson">
+          Hello 1
+        </div>
+        <div id="div2" class="targetPerson" style="display: none">
+          Hello2
+        </div>
+        <div id="div3" class="targetPerson" style="display: none">
+          Hello3
+        </div>
+        <div id="div4" class="targetPerson" style="display: none">
+          Hello4
+        </div>
+        <div id="div5" class="targetPerson" style="display: none">
+          Hello5
+        </div>
+        <div id="div6" class="targetPerson" style="display: none">
+          Hello6
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

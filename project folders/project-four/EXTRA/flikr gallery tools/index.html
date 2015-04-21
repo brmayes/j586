@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>Creating Flickr Gallery in jQuery</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+		div.flickr-gallery {
+			width: 800px;
+			height: 550px;
+			overflow: hidden;
+		}
+
+		div.flickr-gallery .clear{
+			clear: both;
+		}
+
+		div.flickr-gallery > div{
+			float: left;
+			max-height: 100%;
+		}
+
+		div.flickr-gallery div.viewport{
+			width: 500px;
+			position: relative;
+		}
+
+		div.flickr-gallery div.viewport img {
+			margin: auto;
+			display: block;
+			border: 0px;
+		}
+		div.flickr-gallery div.viewport .image-info {
+			position: absolute;
+			width: 500px;
+			top: 0px;
+			text-align: center;
+			background-color: #ffffff;
+			-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+			filter: alpha(opacity=75);
+			-moz-opacity: 0.75;
+			opacity: 0.75;
+		}
+
+		div.flickr-gallery div.browser{
+			width: 300px;
+			overflow-y: auto;
+		}
+
+		div.flickr-gallery img{
+			max-width: 100%;
+		}
+
+		div.flickr-gallery ul{
+			list-style: none;
+			padding: 0px;
+			margin: 0px;
+		}
+
+		div.flickr-gallery ul li{
+			float: left;
+			width: 75px;
+			height: 75px;
+			margin-left: 8px;
+			margin-bottom: 8px;
+		}
+	</style>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+
+		(function( $ ) {
+			$.fn.flickr = function(options) {
+				var url = 'http://api.flickr.com/services/feeds/photos_public.gne?tags=blacklivesmatter&tagmode=any&format=json&jsoncallback=?';
+
+				var settings = $.extend( {
+					'api_key': 'API KEY GOES HERE',
+				}, options);
+
+				function view_image(event) {
+					var target = $(event.target);
+
+					if(target.is('img')) {
+						var url = target.attr('data-url');
+						var cache = new Image();
+						cache.src = url;
+						var gallery = target.parents('.flickr-gallery:first').children('div.viewport');
+						var info = gallery.children('div.image-info');
+						var image = gallery.children('img');
+						image.fadeOut('slow', function () {
+							image.attr('src', url);
+							image.fadeIn('slow');
+							info.html(target.attr('data-title') + '<br />' + target.attr('data-tags'));
+						});
+					}
+				}
+
+				return this.each(function() {
+
+					var gallery = $(this);
+					gallery.addClass('flickr-gallery');
+					gallery.append('<h2></h2><h3></h3><div class="viewport"></div><div class="browser"><ul></ul></div><div class="clear"></div>');
+
+					$.getJSON(url, {
+						method: 'flickr.photosets.getInfo',
+						api_key: settings.api_key,
+						photoset_id: settings.photoset_id,
+						format: 'json'
+					}).success(function(state) {
+						gallery.children('h2').html(state.photoset.title._content);
+						gallery.children('h3').html(state.photoset.description._content);
+
+						$.getJSON(url, {
+							method: 'flickr.photosets.getPhotos',
+							api_key: settings.api_key,
+							media: 'photos',
+							photoset_id: settings.photoset_id,
+							format: 'json',
+							extras: 'url_sq,url_m,date_taken,tags'
+						}).success(function(state) {
+							var list = gallery.find('ul:first');
+							list.html('');
+							list.on('click', view_image);
+
+							$.each(state.photoset.photo, function(){
+								if(this.isprimary == "1") {
+									var viewport = gallery.children('div.viewport');
+									viewport.html('');
+									viewport.html('<img src="' + this.url_m + '" /><div class="image-info">' + this.title + '<br />' + this.tags + '</div>');
+								}
+								list.append('<li><img src="' + this.url_sq + '" ' +
+									'data-title="' + this.title + '" ' +
+									'data-url="' + this.url_m + '" ' +
+									( this.date_taken ? 'data-date="' + this.date_taken + '" ' : '' ) +
+									'data-tags="' + this.tags + '" ' +
+									'/></li>');
+							});
+
+						}).fail(function(state) {
+							alert("Unable to retrieve photo set");
+						});
+					}).fail(function(state) {
+						alert("Unable to retrieve photo set information");
+					});
+				});
+
+			};
+		})( jQuery );
+
+		$(document).on('ready', function(){
+			$('div#gallery').flickr({ photoset_id: '72157626766436507'});
+		});
+	</script>
+</head>
+<body>
+<div id="page">
+	<!-- [banner] -->
+	<header id="banner">
+		<hgroup>
+			<h1>Creating Flickr Gallery in jQuery</h1>
+		</hgroup>
+	</header>
+	<!-- [content] -->
+	<section id="content">
+		<div id="gallery">
+		</div>
+	</section>
+
+</div>
+<!-- [/page] -->
+</body>
+</html>
