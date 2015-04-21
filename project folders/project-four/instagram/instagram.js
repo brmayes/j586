@@ -29,13 +29,10 @@ $(function() {
 
 			var i = 0;
 
-			//header
-			// insta += '<div class="instagram-header">'
-			// insta += '<h2 class="instagram-headertext">Instagram</h2>'
-			// insta += '</div>'
-
 				$.each(json.data,function(i,data){
-					if (i < 3) {
+					var date = new Date(data.created_time * 1000);
+
+					// if (i < 3) {
 
 						//loop
 						insta += '<div class="instagram-loop">'
@@ -50,13 +47,14 @@ $(function() {
 						insta += '<br></a></div>'
 
 						//user name
-						insta += '<div class="col-md-8 col-xs-8"'
-						insta += '<p class="instagram-username">' + data.user.username + '</p>'
+						insta += '<div class="col-md-7 col-xs-7 instagram-username-div"'
+						insta += '<p class="instagram-username">'
+						insta += '<a target="_blank" href="http://www.instagram.com/' + data.user.username + '">' + data.user.username + '</a></p>'
 						insta += '</div>'
 
 						//date
-						insta += '<div class="col-md-2 col-xs-2 col2insta">'
-						insta += 'date'
+						insta += '<div class="col-md-3 col-xs-3 col2insta instagram-date-div">'
+						insta += '<div class="clock"></div>'
 						insta += '</div>'
 
 						//end row
@@ -67,12 +65,17 @@ $(function() {
 						insta += '<img width="100%" class="instagram-image" src ="' + data.images.low_resolution.url + '">'
 						insta += '</a>'
 
-						//comment
-						insta += '<p class="instagram-caption">' + data.caption.text + '</p>'
+						//likes and caption
+						insta += '<div class="instagram-caption-div">'
+						insta += '<div class="heart"></div>' + data.likes.count
+						insta += '<br><div class="chatbubble"></div>'
+						insta += '<span class="instagram-username-caption">'
+						insta += '<a target="_blank" href="http://www.instagram.com/' + data.user.username + '">' + data.user.username + '</span></a>' + data.caption.text
+						insta += '</div>'
 
 						//end of loop
 						insta += '</div>'
-					}
+					// }
 				});
 
 			//console.log(insta);
