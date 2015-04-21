@@ -4,6 +4,11 @@ body {
   margin:0 10px;
 }
 
+.row-nomargin {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .nav {
   height: 220px;
   color: white;
@@ -65,6 +70,7 @@ body {
   float: left;
   width: 40%;
   padding: 0 10px 0 0;
+  max-width: 120px;
 }
 
 .caps {
@@ -100,4 +106,65 @@ button {
 
 .col-md-2, .col-xs-6 {
   padding: 0 5px;
+}
+
+/* INSTRAGRAM STYLES */
+
+#instagram {
+  max-width: 320px;
+  max-height: 600px;
+  overflow-y: auto;
+  margin: 0 auto;
+  display: block;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+
+.instagram-content {
+  max-width: 320px;
+}
+
+.instagram-header {
+  background: #2E5E86;
+  height: 50px;
+}
+
+.instagram-headertext {
+  font-family: 'billabong';
+  font-size: 35px;
+  color: white;
+  letter-spacing: 1.5px;
+  text-align: center;
+  padding-top: 7px;
+}
+
+.instagram-profilepictures {
+  border-radius: 50%;
+  display: inline-block;
+  float: left;
+}
+
+.instagram-username {
+  display: inline-block;
+}
+
+.instagram-image {
+  max-width: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+}
+
+.instagram-loop {
+  margin: 25px 0;
+}
+
+.instagram-caption {
+  margin: 10px;
+}
+
+.col2insta {
+  padding-left: 15px;
+  padding-right: 15px;
 }

@@ -13,7 +13,7 @@ $(function() {
 	var apiurl = "https://api.instagram.com/v1/tags/blacklivesmatter/media/recent?access_token=26533789.aba575d.fa5050cc779741628bd2fbaab4dc3e85&callback=?"
 	var apiselfinsta = "https://api.instagram.com/v1/users/26533789?access_token=26533789.1fb234f.b64427167302446a8867ac168a944e3b &callback=?"
 	var access_token = location.hash.split('=')[1];
-	var html = "";
+	var insta = "";
 
 		$.ajax({
 			type: "GET",
@@ -29,18 +29,54 @@ $(function() {
 
 			var i = 0;
 
-				$.each(json.data,function(i,data){
-					if (i < 20) {
+			//header
+			// insta += '<div class="instagram-header">'
+			// insta += '<h2 class="instagram-headertext">Instagram</h2>'
+			// insta += '</div>'
 
-						// html += '<p>Caption:"'+ data.caption.text +'"</p>';
-						html += '<a target="_blank" href="' + data.link + '">'
-						html += '<img width="5%;" src ="' + data.images.low_resolution.url + '">'
-						html += '</a>'
+				$.each(json.data,function(i,data){
+					if (i < 3) {
+
+						//loop
+						insta += '<div class="instagram-loop">'
+
+						//row
+						insta += '<div class="row row-nomargin">'
+
+						//user information
+						insta += '<div class="col-md-2 col-xs-2 col2insta">'
+						insta += '<a target="_blank" href="http://www.instagram.com/' + data.user.username + '">'
+						insta += '<img width="40px" class="instagram-profilepictures" src="' + data.user.profile_picture + '">'
+						insta += '<br></a></div>'
+
+						//user name
+						insta += '<div class="col-md-8 col-xs-8"'
+						insta += '<p class="instagram-username">' + data.user.username + '</p>'
+						insta += '</div>'
+
+						//date
+						insta += '<div class="col-md-2 col-xs-2 col2insta">'
+						insta += 'date'
+						insta += '</div>'
+
+						//end row
+						insta += '</div>'
+
+						//image and link
+						insta += '<a target="_blank" href="' + data.link + '">'
+						insta += '<img width="100%" class="instagram-image" src ="' + data.images.low_resolution.url + '">'
+						insta += '</a>'
+
+						//comment
+						insta += '<p class="instagram-caption">' + data.caption.text + '</p>'
+
+						//end of loop
+						insta += '</div>'
 					}
 				});
 
-			//console.log(html);
-			$('#instagram').append(html);
+			//console.log(insta);
+			$('#instagram').append(insta);
 
 		}
 

@@ -239,6 +239,9 @@ function initialize() {
     map: map
   });
 
+  // $('.targetPerson').hide();
+  // $('#div'+$(this).attr('target')).show();
+
 
 
   // creates div event
@@ -247,6 +250,11 @@ function initialize() {
       $('#div1').css('display', 'none');
     } else {
       $('#div1').css('display', 'block');
+      $('#div2').hide();
+      $('#div3').hide();
+      $('#div4').hide();
+      $('#div5').hide();
+      $('#div6').hide();
     }
   });
 
@@ -255,6 +263,11 @@ function initialize() {
       $('#div2').css('display', 'none');
     } else {
       $('#div2').css('display', 'block');
+      $('#div1').hide();
+      $('#div3').hide();
+      $('#div4').hide();
+      $('#div5').hide();
+      $('#div6').hide();
     }
   });
 
@@ -263,6 +276,11 @@ function initialize() {
       $('#div3').css('display', 'none');
     } else {
       $('#div3').css('display', 'block');
+      $('#div1').hide();
+      $('#div2').hide();
+      $('#div4').hide();
+      $('#div5').hide();
+      $('#div6').hide();
     }
   });
 
@@ -271,6 +289,11 @@ function initialize() {
       $('#div4').css('display', 'none');
     } else {
       $('#div4').css('display', 'block');
+      $('#div1').hide();
+      $('#div2').hide();
+      $('#div3').hide();
+      $('#div5').hide();
+      $('#div6').hide();
     }
   });
 
@@ -279,6 +302,11 @@ function initialize() {
       $('#div5').css('display', 'none');
     } else {
       $('#div5').css('display', 'block');
+      $('#div1').hide();
+      $('#div2').hide();
+      $('#div3').hide();
+      $('#div4').hide();
+      $('#div6').hide();
     }
   });
 
@@ -287,6 +315,11 @@ function initialize() {
       $('#div6').css('display', 'none');
     } else {
       $('#div6').css('display', 'block');
+      $('#div1').hide();
+      $('#div2').hide();
+      $('#div3').hide();
+      $('#div4').hide();
+      $('#div5').hide();
     }
   });
 

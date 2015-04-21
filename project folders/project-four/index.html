@@ -28,6 +28,10 @@
         $('.targetPerson').hide();
         $('#div'+$(this).attr('target')).show();
       });
+
+      $('.hideAll').click(function(){
+        $('.targetPerson').hide();
+      });
     });
   </script>
 
@@ -83,7 +87,11 @@
             <div class="col-md-2 col-xs-6"><button target="4" class="showSingle"><div class="blueMarker"></div>Tamir Rice</button></div>
             <div class="col-md-2 col-xs-6"><button target="5" class="showSingle"><div class="greenMarker"></div>Eric Courtney Harris</button></div>
             <div class="col-md-2 col-xs-6"><button target="6" class="showSingle"><div class="purpleMarker"></div>Walter L. Scott</button></div>
-
+          </div>
+          <div class="row row-buttons">
+            <div class="col-xs-12 hidden-md hidden-lg">
+              <button class="hideAll">Hide All</button>
+            </div>
           </div>
         </div>
       </div>
@@ -246,15 +254,32 @@
             <a href="http://www.theroot.com/articles/news/2015/04/here_s_what_you_need_to_know_about_walter_l_scott.html">The Root (Image)</a>
           </p>
         </div>
+
       </div>
     <!--END OF MAP SECTION-->
     </div>
 
-    <div class="row">
+    <!-- <div class="row">
       <div class=col-md-12>
         <div id="flikrfeed"></div>
       </div>
+    </div> -->
+
+    <div class="row">
+      <div class="col-md-6">
+
+      </div>
+      <div class="col-md-6">
+        <!-- INSTAGRAM -->
+        <div class="instagram-content">
+          <div class="instagram-header">
+            <h2 class="instagram-headertext">Instagram</h2>
+          </div>
+          <div id="instagram"></div>
+        </div>
+      </div>
     </div>
+
 
 
 
