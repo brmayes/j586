@@ -5,6 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Twitter API</title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="tweetLinkIt.js"></script>
+  <script>
+
+  $('.tweet').tweetLinkify();
+
+  function pageComplete(){
+    $('.tweet').tweetLinkify();
+  }
+
+  </script>
+
 
 
   <style>
@@ -104,35 +116,30 @@
   //echo $tweetData . "</br>";
 
 
-
-
   foreach($tweetData['statuses'] as $items)
       {
 
         $userArray = $items['user'];
-        $mediaArray = $items['media.media_url'];
+        $entitiesArray = $items['entities'];
+        $mediaArray = $entitiesArray['media'];
+        $tweetMedia = $mediaArray[0];
+
         $date = new DateTime( $items->created_at );
 
-        //echo date('M d h:i:s', strtotime($items['created_at']));
+        //echo "<a src='" . $tweetMedia['media_url'] . "'>";
         echo "<div class='tweet-div'><div class='float-left twitpic'><a target='_blank' href='http://www.twitter.com/" . $userArray['screen_name'] . "'><img class='twitter-pic' target='_blank' src='" . $userArray['profile_image_url'] . "'></a></div>";
-        echo "<a target='_blank' href='http://www.twitter.c om/" . $userArray['screen_name'] . "'><span class='name bold'>" . $userArray['name'] . "</span>   </br><span class='handle'>@" . $userArray['screen_name'] . "</span></a>  <span class='font-small'>&sdot; ";
+        echo "<a target='_blank' href='http://www.twitter.com/" . $userArray['screen_name'] . "'><span class='name bold'>" . $userArray['name'] . "</span>   </br><span class='handle'>@" . $userArray['screen_name'] . "</span></a>  <span class='font-small'>&sdot; ";
         echo $date->format( 'M jS' ) . "</span></br>";
-        echo $items['text'] . "</br></br>";
-        //echo "At: " . $items['created_at'] . "</br>";
-        //echo "<img target='_blank' src='http://" . $mediaArray['media_url'] . "'></br></br>";
-        //echo $mediaArray['media_url'] . "";
+        echo "<div class='tweet'>" . $items['text'] . "</div></br></br>";
+        echo "<a target='_blank' href='http://www.twitter.com/" . $tweetMedia['media_url'] . "'><img class='twitter-pic' target='_blank' src='" . $tweetMedia['media_url'] . "'></a>";
         echo "<span class='border'></span></div>";
-        //echo $mediaArray['media_url'] . "<p>this is media array</p>";
       }
 
 
-
-
-  //echo $twitter->setGetfield($getfield)
-    //           ->buildOauth($url, $requestMethod)
-      //         ->performRequest(); 
-
+      //echo "<pre>" . print_r($tweetData) . "</pre>";
+      echo "<script>pageComplete();</script>";
   ?>
+
 </body>
 
 </html>

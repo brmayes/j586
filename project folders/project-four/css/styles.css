@@ -3,6 +3,7 @@
 body {
   margin:0 10px;
   font-family: 'Roboto';
+  overflow-x: hidden;
 }
 
 .row-nomargin {
@@ -112,7 +113,7 @@ button {
 
 /* INSTRAGRAM STYLES */
 
-#instagram {
+#instagram, #twitter {
   max-width: 320px;
   max-height: 450px;
   overflow-y: auto;
@@ -122,6 +123,9 @@ button {
   border-right: 1px solid black;
   border-left: 1px solid black;
   border-bottom: 1px solid black;
+}
+
+#instagram {
   margin-bottom: 25px;
 }
 
@@ -171,6 +175,7 @@ button {
 
 .instagram-caption-div {
   margin: 0 10px 0 10px;
+  overflow-x: hidden;
 }
 
 .instagram-image {
@@ -192,4 +197,73 @@ button {
 .col2insta {
   padding-left: 15px;
   padding-right: 15px;
+}
+
+
+/*TWITTER*/
+#twitter {
+  max-width: 320px;
+  max-height: 408px;
+  overflow-y: auto;
+  overflow-x: none;
+  margin: 0 auto;
+  display: block;
+  border-right: 1px solid #CCD6DD;
+  border-left: 1px solid #CCD6DD;
+  border-bottom: 1px solid #CCD6DD;
+  border-top: none;
+}
+
+.twitter-content {
+  max-width: 320px;
+}
+
+.twitter-header {
+  background: #55ACEE;
+  height: 50px;
+}
+
+.twitter-headertext {
+  font-family: 'Open Sans';
+  font-size: 28px;
+  color: white;
+  letter-spacing: 0px;
+  text-align: center;
+  padding-top: 8px;
+  font-weight: 600;
+  padding-left: 105px;
+}
+
+.twitter-input {
+  max-width: 320px;
+}
+
+.input-group {
+  width: 100%;
+  max-width: 300px;
+  display: block;
+  margin: 0 auto;
+  padding: 4px 0;
+}
+
+.form-control {
+  border-radius: 5px;
+}
+
+#twitter-input {
+  border-radius: 5px;
+}
+
+.twitter-input-div {
+  background-color: #E5E5E5;
+  height: 42px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.twitter-bird {
+  max-width: 30px;
+  margin-left: 70px;
+  padding-left: 6px;
+  padding-bottom: 3px;
 }
