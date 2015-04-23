@@ -177,6 +177,7 @@ function initialize() {
   var riceLoc = new google.maps.LatLng(41.479083,-81.752365);
   var scottLoc = new google.maps.LatLng(32.8994129,-80.0142688);
   var harrisLoc = new google.maps.LatLng(36.1523015,-95.8780106);
+  var grayLoc = new google.maps.LatLng(39.3105431,-76.6486858);
 
 
 
@@ -200,6 +201,7 @@ function initialize() {
   var blueMarker = 'assets/mapmarkers/google-marker-04.png'
   var purpleMarker = 'assets/mapmarkers/google-marker-05.png'
   var greenMarker = 'assets/mapmarkers/google-marker-06.png'
+  var goldMarker = 'assets/mapmarkers/google-marker-07.png'
 
 
   //creates marker
@@ -239,6 +241,12 @@ function initialize() {
     map: map
   });
 
+  var gray = new google.maps.Marker({
+    position: grayLoc,
+    icon: goldMarker,
+    map: map
+  });
+
   // $('.targetPerson').hide();
   // $('#div'+$(this).attr('target')).show();
 
@@ -255,6 +263,7 @@ function initialize() {
       $('#div4').hide();
       $('#div5').hide();
       $('#div6').hide();
+      $('#div7').hide();
     }
   });
 
@@ -268,6 +277,7 @@ function initialize() {
       $('#div4').hide();
       $('#div5').hide();
       $('#div6').hide();
+      $('#div7').hide();
     }
   });
 
@@ -281,6 +291,7 @@ function initialize() {
       $('#div4').hide();
       $('#div5').hide();
       $('#div6').hide();
+      $('#div7').hide();
     }
   });
 
@@ -294,6 +305,7 @@ function initialize() {
       $('#div3').hide();
       $('#div5').hide();
       $('#div6').hide();
+      $('#div7').hide();
     }
   });
 
@@ -307,6 +319,7 @@ function initialize() {
       $('#div3').hide();
       $('#div4').hide();
       $('#div6').hide();
+      $('#div7').hide();
     }
   });
 
@@ -320,6 +333,21 @@ function initialize() {
       $('#div3').hide();
       $('#div4').hide();
       $('#div5').hide();
+      $('#div7').hide();
+    }
+  });
+
+  google.maps.event.addListener(gray, 'click', function (gray, i) {
+    if ($('#div7').css('display') == 'block') {
+      $('#div7').css('display', 'none');
+    } else {
+      $('#div7').css('display', 'block');
+      $('#div1').hide();
+      $('#div2').hide();
+      $('#div3').hide();
+      $('#div4').hide();
+      $('#div5').hide();
+      $('#div6').hide();
     }
   });
 

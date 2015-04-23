@@ -39,9 +39,9 @@ a:hover {
 .nav-header {
   color: white;
   text-align: center;
-  font-family: 'Iron & Brine';
+  font-family: 'Bitter';
   font-weight: 700;
-  font-size: 3vm;
+  font-size: 7vmin;
   padding-top: 20px;
   margin-bottom: 0;
 }
@@ -150,7 +150,7 @@ button {
 }
 
 .instagram-headertext {
-  font-family: 'billabong';
+  font-family: 'rochester';
   font-size: 35px;
   color: white;
   letter-spacing: 1.5px;
@@ -198,7 +198,7 @@ button {
 }
 
 .instagram-loop {
-  margin: 25px 0;
+  margin: 8px 0 25px 0;
 }
 
 .instagram-caption {

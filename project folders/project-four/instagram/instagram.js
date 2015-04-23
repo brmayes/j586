@@ -113,7 +113,7 @@ $(function() {
 						//date
 						insta += '<div class="col-md-3 col-xs-3 col2insta instagram-date-div">'
 						insta += '<div class="clock"></div>'
-						insta += day
+						//insta += day
 						insta += '</div>'
 
 						//end row

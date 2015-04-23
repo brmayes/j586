@@ -9,7 +9,7 @@ $(document).ready(function(){
 		$.each(json.items,function(i,data){
 			html += '<a target="_blank" href="' + data.link + '"><img class="flickr-images" src ="' + data.media.m + '"></a>'
 		});
-		console.log(html);
+		//console.log(html);
 		$("#flickr").append(html);
 	});
 
