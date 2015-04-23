@@ -92,6 +92,7 @@ a {
 h3 {
   margin-top: 0;
   font-family: 'bitter';
+  padding-top: 20px;
 }
 
 .causes {
@@ -132,7 +133,7 @@ button {
 
 /* INSTRAGRAM STYLES */
 
-#instagram {
+#instagram, #instagram-blm {
   max-width: 320px;
   max-height: 450px;
   overflow-y: auto;
@@ -144,7 +145,7 @@ button {
   border-bottom: 1px solid black;
 }
 
-#instagram {
+#instagram, #instagram-blm, #twitter-blm{
   margin-bottom: 25px;
 }
 
@@ -221,6 +222,19 @@ button {
 
 /*TWITTER*/
 #twitter {
+  max-width: 320px;
+  max-height: 408px;
+  overflow-y: auto;
+  overflow-x: none;
+  margin: 0 auto;
+  display: block;
+  border-right: 1px solid #CCD6DD;
+  border-left: 1px solid #CCD6DD;
+  border-bottom: 1px solid #CCD6DD;
+  border-top: none;
+}
+
+#twitter-blm {
   max-width: 320px;
   max-height: 408px;
   overflow-y: auto;
@@ -337,4 +351,17 @@ button {
   margin-left: 70px;
   padding-left: 6px;
   padding-bottom: 3px;
+}
+
+.blm-section {
+  margin-top: 25px;
+}
+
+.blm-content {
+  margin-top: 20px;
+}
+
+.blm-tag {
+  font-family: 'bitter';
+  font-size: 15px;
 }
