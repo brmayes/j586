@@ -1,0 +1,35 @@
+{
+  "name": "jquery.linky",
+  "main": "jquery.linky",
+  "version": "0.1.8",
+  "homepage": "http://ansavvides.github.io/jquery.linky/",
+  "description": "Linkify URLs, mentions (Twitter, Instagram, GitHub) and hashtags (Twitter)",
+  "keywords": [
+    "jquery",
+    "linky",
+    "linkifying",
+    "mentions",
+    "hashtags",
+    "urls",
+    "twitter",
+    "instagram",
+    "github"
+  ],
+  "authors": [
+    {
+      "name": "Andreas Savvides",
+      "email": "andreas@nibbli.com"
+    }
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "repository": {
+    "type": "git", "url": "git://github.com/AnSavvides/jquery.linky.git"
+  }
+}

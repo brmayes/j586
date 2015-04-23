@@ -90,9 +90,6 @@ $(function() {
 
 
 
-
-
-
 					// if (i < 3) {
 
 						//loop
@@ -132,13 +129,29 @@ $(function() {
 						insta += '<div class="heart"></div>' + data.likes.count
 						insta += '<br><div class="chatbubble"></div>'
 						insta += '<span class="instagram-username-caption">'
-						insta += '<a target="_blank" href="http://www.instagram.com/' + data.user.username + '">' + data.user.username + '</span></a>' + data.caption.text
+						insta += '<a target="_blank" href="http://www.instagram.com/' + data.user.username + '">' + data.user.username + '</span></a>'
+						insta += '<div class="hashtags">' + data.caption.text + '</div>'
 						insta += '</div>'
 
 						//end of loop
 						insta += '</div>'
 					// }
 				});
+
+				$(".url").linky();
+
+				$(".instagram-mentions").linky({
+						mentions: true,
+						urls: false,
+						linkTo: "instagram"
+				});
+
+				$(".hashtags").linky({
+						hashtags: true,
+						urls: false,
+						linkTo: "instagram"
+				});
+
 
 			//console.log(insta);
 			$('#instagram').append(insta);

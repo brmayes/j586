@@ -1,5 +1,6 @@
 // Authenticate via OAuth
-var tumblr = require('tumblr.js');
+var tumblr = require('../lib/tumblr');
+tumblr.request(require('browser-request'));
 var client = tumblr.createClient({
   consumer_key: 'mFId22fEs3gQuEdLRObBCglhtINgbGyM92482HuODyGvGS6J7B',
   consumer_secret: 'TgJoLjZejIBkc3TA0QN9ISgWOYWEUOQ8aq5vRNhO0A5r8YedBU',
