@@ -7,10 +7,10 @@ $(document).ready(function(){
 		$("#results").append('<p>"'+json.title+'"</p>');
 
 		$.each(json.items,function(i,data){
-			html += '<a target="_blank" href="' + data.link + '"><img style="display:inline-block; height:175px;" src ="' + data.media.m + '"></a>'
+			html += '<a target="_blank" href="' + data.link + '"><img class="flickr-images" src ="' + data.media.m + '"></a>'
 		});
 		console.log(html);
-		$("#flikrfeed").append(html);
+		$("#flickr").append(html);
 	});
 
 

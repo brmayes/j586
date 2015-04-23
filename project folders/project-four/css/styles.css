@@ -17,6 +17,9 @@ body {
   background-color: #2B2B2B;
 }
 
+a:hover {
+  text-decoration: none;
+}
 
 .header-text {
   height: 100%;
@@ -111,9 +114,17 @@ button {
   padding: 0 5px;
 }
 
+.socialmedia-link {
+  color: white;
+}
+
+.socialmedia-link:hover {
+  color: white;
+}
+
 /* INSTRAGRAM STYLES */
 
-#instagram, #twitter {
+#instagram {
   max-width: 320px;
   max-height: 450px;
   overflow-y: auto;
@@ -262,6 +273,58 @@ button {
 }
 
 .twitter-bird {
+  max-width: 30px;
+  margin-left: 70px;
+  padding-left: 6px;
+  padding-bottom: 3px;
+}
+
+/* FLICKR FEED */
+
+#flickr {
+  max-width: 320px;
+  max-height: 450px;
+  overflow-y: auto;
+  overflow-x: none;
+  margin: 0 auto;
+  display: block;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.flickr-content {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.flickr-header {
+  background: #2B2B2B;
+  height: 50px;
+}
+
+.flickr-headertext {
+  font-family: 'Titillium Web';
+  font-size: 35px;
+  color: white;
+  letter-spacing: 1.5px;
+  text-align: center;
+  padding-top: 7px;
+  margin-left: 110px;
+}
+
+.flickr-headertext:hover {
+  color: white;
+}
+
+.flickr-images {
+  display:inline-block;
+  width: 303px;
+  border-bottom: white 1px solid;
+  padding-bottom: 1px;
+}
+
+.flickr-logo {
   max-width: 30px;
   margin-left: 70px;
   padding-left: 6px;
