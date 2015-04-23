@@ -74,3 +74,11 @@
 	left: 0px;
 	top: 4px;
 }
+
+.goldMarker{
+	position: absolute;
+  width: 18.5px;
+  height: 33px;
+  left: 0px;
+  top: 3px;
+}
