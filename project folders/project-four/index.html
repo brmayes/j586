@@ -42,6 +42,16 @@
       $('.hideAll').click(function(){
         $('.targetPerson').hide();
       });
+
+      $("#hidden").click(function(){
+        $("#hidden_text").show();
+        $("#hidden").hide();
+      });
+
+      $("#hide").click(function(){
+        $("#hidden_text").hide();
+        $("#hidden").show();
+      });
     });
   </script>
 
@@ -315,6 +325,14 @@
 
 
     <div class="row">
+      <h3>Social Media Responses</h3>
+      <p>
+        People around the nation took to social media to voice their opinions. Many support the movement, many do not.
+      </p>
+      <p>
+        Twitter, Instagram and Flickr are three forms of social media people continute to use to share their opinions
+        about #BlackLivesMatter and the #BlackLivesMatter movement.
+      </p>
       <div class="col-md-4">
         <!--TWITTER-->
         <div class="twitter-content">
@@ -356,35 +374,71 @@
       <!-- END OF #BLM SOCIAL MEDIA STREAMS -->
 
 
-      <div class="row">
-        <div class="col-md-4">
-          <div class="twitter-content">
-            <div class="twitter-header">
-              <a target"_blank" class="socialmedia-link" href="http://www.twitter.com"><h2 class="twitter-headertext">Twitter<img class="twitter-bird" src="twitter/assets/Twitter_logo_white.png"></a></h2>
+      <div class="row blm-section">
+        <h3>The #BlackLivesMatter Movement</h3>
+        <p>
+          The movement is a about all black lives. They have grown in numbers since 2012 when the death of teenager Trayvon Martin.
+          The #BlackLivesMatter movement is an "affirmation and embrace of the resistance and resilience of Black people."
+        </p>
+        <p>
+          To read more, view the official Twitter and Instagram of the movement and learn more about the movement, click below.
+        </p>
+        <button id="hidden">Read More</button></br>
+        <div id="hidden_text" style="display: none">
+          <div class="col-md-4">
+            <div class="twitter-content">
+              <div class="twitter-header">
+                <a target"_blank" class="socialmedia-link" href="http://www.twitter.com"><h2 class="twitter-headertext">Twitter<img class="twitter-bird" src="twitter/assets/Twitter_logo_white.png"></a></h2>
+              </div>
+              <iframe id="twitter-blm" src="twitter/index-blm.php" name="twitter api" scrolling="yes" frameborder="1" marginheight="10px" marginwidth="0px" height="500px" width="320px;"></iframe>
             </div>
-            <iframe id="twitter-blm" src="twitter/index-blm.php" name="twitter api" scrolling="yes" frameborder="1" marginheight="10px" marginwidth="0px" height="500px" width="320px;"></iframe>
-          </div>
-          <div class="twitter-input-div">
-            <div class="twitter-input">
-              <a traget="_blank" href='https://twitter.com/intent/tweet?text=%23blacklivesmatter'>
-                <div class="input-group"><input id="twitter-input" type="text" class="form-control" placeholder="Tweet about #BlackLivesMatter" aria-describedby="basic-addon1"></div>
-              </a>
+            <div class="twitter-input-div">
+              <div class="twitter-input">
+                <a traget="_blank" href='https://twitter.com/intent/tweet?text=%23blacklivesmatter'>
+                  <div class="input-group"><input id="twitter-input" type="text" class="form-control" placeholder="Tweet about #BlackLivesMatter" aria-describedby="basic-addon1"></div>
+                </a>
+              </div>
             </div>
           </div>
+
+          <div class="col-md-4">
+            <!-- INSTAGRAM -->
+            <div class="instagram-content">
+              <div class="instagram-header">
+                <h2 class="instagram-headertext tk-tamarillo"><a class="socialmedia-link" href="http://instagram.com" target="_blank">Instagram</a><a href="."><div class="reload"></div></a></h2>
+              </div>
+              <div id="instagram-blm"></div>
+            </div>
+          </div>
+
+          <div class"col-md-4">
+            <div class="blm-content">
+              <a src="http://blacklivesmatter.com" target="_blank"><h3 class="blm-title">BlackLivesMatter.com</h3></a>
+              <p class="blm-tag">
+                "All #BlackLivesMatter. This is Not a Moment, but a <span class="italics">Movement</span>."
+              </p>
+              <p>
+                From the movement:
+              </p>
+              <p>
+                "#BlackLivesMatter is working for a world where Black lives are no longer systematically and intentionally
+                targeted for demise.  We affirm our contributions to this society, our humanity, and our resilience in the
+                face of deadly oppression.  We have put our sweat equity and love for Black people into creating a political
+                project–taking the hashtag off of social media and into the streets. The call for Black lives to matter is a
+                rallying cry for ALL Black lives striving for liberation." (<a target="_blank"  href="http://blacklivesmatter.com/about/"><span class="caps">Citation</span></a>)
+              </p>
+              <p>
+                To view the demands, click <a target="_blank" src="http://blacklivesmatter.com/demands/">here</a>.
+              </p>
+              <p>
+                To learn about Ferguson, click <a target="_blank" src="http://blacklivesmatter.com/ferguson/">here</a>.
+              </p>
+
+            </div>
+        <button id="hide">Read Less</button>
         </div>
 
-        <div class="col-md-4">
-          <!-- INSTAGRAM -->
-          <div class="instagram-content">
-            <div class="instagram-header">
-              <h2 class="instagram-headertext tk-tamarillo"><a class="socialmedia-link" href="http://instagram.com" target="_blank">Instagram</a><a href="."><div class="reload"></div></a></h2>
-            </div>
-            <div id="instagram-blm"></div>
-          </div>
-        </div>
 
-        <div class"col-md-4">
-          <a src="http://blacklivesmatter.com" target="_blank"><h3 class="blm-title">BlackLivesMatter.com</h3></a>
         </div>
       </div>
 

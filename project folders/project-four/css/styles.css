@@ -92,6 +92,7 @@ a {
 h3 {
   margin-top: 0;
   font-family: 'bitter';
+  padding-top: 20px;
 }
 
 .causes {
@@ -350,4 +351,17 @@ button {
   margin-left: 70px;
   padding-left: 6px;
   padding-bottom: 3px;
+}
+
+.blm-section {
+  margin-top: 25px;
+}
+
+.blm-content {
+  margin-top: 20px;
+}
+
+.blm-tag {
+  font-family: 'bitter';
+  font-size: 15px;
 }
