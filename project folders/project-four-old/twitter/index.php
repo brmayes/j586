@@ -119,6 +119,10 @@
       .expand:hover {
         color: #666666;
       }
+
+      body {
+        overflow-x: hidden;
+      }
     </style>
 
 </head>

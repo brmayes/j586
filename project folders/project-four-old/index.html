@@ -11,9 +11,14 @@
   <script src="http://codeorigin.jquery.com/jquery-2.0.3.min.js" type="text/javascript"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+  <script src="js/linky/jquery.linky.js"></script>
+
+  <!-- Fonts -->
   <link href='http://fonts.googleapis.com/css?family=Istok+Web:400,700,400italic,700italic|Anton|Muli:300,400,300italic,400italic|PT+Sans+Caption:400,700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Roboto:500,400italic,700italic,300,700,500italic,300italic,400' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Titillium+Web:700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Bitter:400,700|Rochester' rel='stylesheet' type='text/css'>
 
   <!-- CSS and Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -23,7 +28,7 @@
 
   <!-- API scripts -->
   <script src="instagram/instagram.js" type="text/javascript"></script>
-  <script src="flikr/flikr.js" type="text/javascript"></script>
+  <script src="flickr/flickr.js" type="text/javascript"></script>
   <script src="google-maps/maps.js"></script>
   <script src="google-maps/maps-small.js"></script>
   <script>
@@ -56,7 +61,6 @@
     <div class="row">
       <div class="col-md-12 nav">
         <h1 class="nav-header">#BlackLivesMatter</h1>
-        <h3 class="nav-subhead">A look at how social media...(FINISH TAGLINE)</h3>
       </div>
     </div>
 
@@ -73,7 +77,10 @@
         </p>
         <p>
           The movement has since continued to grow and transform as more Black individuals across the
-          United States were wrongfully killed.
+          United States were wrongfully killed by those who were meant to protect them.
+        </p>
+        <p>
+          This is a look at how social media has responded to the current events in the Black Lives Matter movement.
         </p>
       </div>
 
@@ -86,17 +93,21 @@
         <div id="map-small" class="hidden-md hidden-lg"></div>
         <div class="causes-buttons">
           <div class="row row-buttons">
-            <div class="col-md-2 col-xs-6 alldiv"><button target="1" class="showSingle"><div class="redMarker"></div>Trayvon Martin</button></div>
-            <div class="col-md-2 col-xs-6"><button target="2" class="showSingle"><div class="tealMarker"></div>Eric Garner</button></div>
-            <div class="col-md-2 col-xs-6"><button target="3" class="showSingle"><div class="orangeMarker"></div>Michael Brown</button></div>
-            <div class="col-md-2 col-xs-6"><button target="4" class="showSingle"><div class="blueMarker"></div>Tamir Rice</button></div>
-            <div class="col-md-2 col-xs-6"><button target="5" class="showSingle"><div class="greenMarker"></div>Eric Courtney Harris</button></div>
-            <div class="col-md-2 col-xs-6"><button target="6" class="showSingle"><div class="purpleMarker"></div>Walter L. Scott</button></div>
+            <div class="row">
+              <div class="col-md-3 col-xs-6"><button target="1" class="showSingle"><div class="redMarker"></div>Trayvon Martin</button></div>
+              <div class="col-md-3 col-xs-6"><button target="2" class="showSingle"><div class="tealMarker"></div>Eric Garner</button></div>
+              <div class="col-md-3 col-xs-6"><button target="3" class="showSingle"><div class="orangeMarker"></div>Michael Brown</button></div>
+              <div class="col-md-3 col-xs-6"><button target="4" class="showSingle"><div class="blueMarker"></div>Tamir Rice</button></div>
+            </div>
+            <div class="row">
+              <div class="col-md-4 col-xs-6"><button target="5" class="showSingle"><div class="greenMarker"></div>Eric Courtney Harris</button></div>
+              <div class="col-md-4 col-xs-6"><button target="6" class="showSingle"><div class="purpleMarker"></div>Walter L. Scott</button></div>
+              <div class="col-md-4 col-xs-6"><button target="7" class="showSingle"><img class="goldMarker" src="assets/mapmarkers/google-marker-07.png">Freddie Gray</button></div>
+              <div class="col-xs-6 hidden-md hidden-lg"><button class="hideAll">Hide All</button></div>
+            </div>
           </div>
           <div class="row row-buttons">
-            <div class="col-xs-12 hidden-md hidden-lg">
-              <button class="hideAll">Hide All</button>
-            </div>
+
           </div>
         </div>
       </div>
@@ -116,7 +127,7 @@
           <p>
             Martin’s death caused a national outcry for the justice of violence against Black lives.
             The hashtag <a target="_blank"  href="https://twitter.com/search?q=blacklivesmatter&src=typd">#BlackLivesMatter</a>
-            was born. Moreover, the Movement Black Lives Matter was started.
+            was born. Moreover, the movement Black Lives Matter was started.
           </p>
           <p><span class="caps">Citations: </span>
             <a target="_blank"  href="http://www.cnn.com/2013/06/05/us/trayvon-martin-shooting-fast-facts/">CNN</a> |
@@ -209,7 +220,7 @@
           <h3>Eric Courtney Harris, 44</h3>
           <p><span class="caps">Location: </span>Tulsa, Okla.</p>
           <p>
-            On April 2, 2015 Eric Courtney Harris was shot by reserve deputy Robert Charles Bates.
+            On April 2, 2015, Eric Courtney Harris was shot by reserve deputy Robert Charles Bates.
             Bates, 73, claims he meant to use a taser on Harris, but pulled his gun mistakingly. According
             to the LA Times, Bates is a “wealthy insurance executive with close personal and political ties
             to the sheriff.” Many accused Bates of “paying to play cop,” due to the numerous contributions
@@ -259,25 +270,58 @@
             <a target="_blank"  href="http://www.theroot.com/articles/news/2015/04/here_s_what_you_need_to_know_about_walter_l_scott.html">The Root (Image)</a>
           </p>
         </div>
-
+        <div id="div7" style="display: none;" class="targetPerson">
+          <img src="assets/images/gray.png" class="profiles">
+          <h3>Freddie Gray, 25</h3>
+          <p><span class="caps">Location: </span>Baltimore, Md.</p>
+          <p>
+            On April 12, 2015, Freddie Gray was involved in an incident that reportedly began with him
+            running from the police for allegedly carrying an oversized pocket knife. However, the police
+            never saw the switchblade and continued to chase after him.
+          </p>
+          <p>
+            Gray was reported to have fled the scene due only to police presence. Gray had perfect health
+            until the police pursued him and detained him. Less than an hour after
+            being detained, Gray was rushed to the hospital for treatment for a spinal injury.
+          </p>
+          <p>
+            As a result, Gray fell into a coma that he would not wake up from. On April 19, 2015, Gray
+            was pronounced dead. Six police officers were suspended with pay following the incident:
+            Lt. Brian Rice, 41, Officer Caesar Goodson, 45, Sgt. Alicia White, 30, Officer William Porter,
+            25, Officer Garrett Miller, 26, and Officer Edward Nero, 29.
+          </p>
+          <p>
+            The incident was caught on tape by a cell phone video from a bystander. In the video, Gray
+            was seemingly limp when he was put in the police van.
+          </p>
+          <p>
+            The public burst with anger as to why a young, healthy black man died in custody of the
+            police. Protests occurred within hours of the news. The hashtag
+            <a target="_blank"  href="https://twitter.com/search?q=freddiegray&src=typd">#FreddieGray</a> and
+            <a target="_blank"  href="https://twitter.com/search?q=justiceforfreddie&src=typd">#JusticeForFreddie</a>
+            poured all over social media platforms with attachments of videos,
+            photographs and images.
+          </p>
+          <p><span class="caps">Citations: </span>
+            <a target="_blank"  href="http://www.nytimes.com/2015/04/22/us/another-mans-death-another-round-of-questions-for-the-police-in-baltimore.html?contentCollection=us&action=click&module=NextInCollection&region=Footer&pgtype=article">NY Times</a> |
+            <a target="_blank"  href="http://www.cnn.com/2015/04/21/us/baltimore-freddie-gray-death">CNN</a> |
+            <a target="_blank"  href="http://www.wbaltv.com/news/charging-documents-freddie-gray-ran-from-police/32468120">WBALTV (Image)</a>
+          </p>
+        </div>
       </div>
     <!--END OF MAP SECTION-->
     </div>
 
-    <!-- <div class="row">
-      <div class=col-md-12>
-        <div id="flikrfeed"></div>
-      </div>
-    </div> -->
+
 
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-4">
         <!--TWITTER-->
         <div class="twitter-content">
           <div class="twitter-header">
-            <h2 class="twitter-headertext">Twitter<a target"_blank" href="http://www.twitter.com"><img class="twitter-bird" src="twitter/assets/Twitter_logo_white.png"></a></h2>
+            <a target"_blank" class="socialmedia-link" href="http://www.twitter.com"><h2 class="twitter-headertext">Twitter<img class="twitter-bird" src="twitter/assets/Twitter_logo_white.png"></a></h2>
           </div>
-          <iframe id="twitter" src="twitter/index.php" name="twitter api" scrolling="yes" frameborder="1" marginheight="10px" marginwidth="0px" height="500px" width="320px;"></iframe>
+          <iframe id="twitter" src="ADD IN TWITTER" name="twitter api" scrolling="yes" frameborder="1" marginheight="10px" marginwidth="0px" height="500px" width="320px;"></iframe>
         </div>
         <div class="twitter-input-div">
           <div class="twitter-input">
@@ -289,13 +333,24 @@
       </div>
 
 
-      <div class="col-md-6">
+      <div class="col-md-4">
         <!-- INSTAGRAM -->
         <div class="instagram-content">
           <div class="instagram-header">
-            <h2 class="instagram-headertext">Instagram<a href="."><div class="reload"></div></a></h2>
+            <h2 class="instagram-headertext tk-tamarillo"><a class="socialmedia-link" href="http://instagram.com" target="_blank">Instagram</a><a href="."><div class="reload"></div></a></h2>
           </div>
           <div id="instagram"></div>
+        </div>
+      </div>
+
+
+      <div class="col-md-4">
+        <!-- INSTAGRAM -->
+        <div class="flickr-content">
+          <div class="flickr-header">
+            <a target"_blank" class="socialmedia-link" href="http://www.flickr.com"><h2 class="flickr-headertext">Flickr<img class="flickr-logo" src="flickr/Flickr-Icon.png"></a></div></a></h2>
+          </div>
+          <div id="flickr"></div>
         </div>
       </div>
     </div>
@@ -304,7 +359,5 @@
 
 
   </div>
-
-
 </body>
 </html>

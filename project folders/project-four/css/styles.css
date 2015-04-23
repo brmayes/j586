@@ -132,7 +132,7 @@ button {
 
 /* INSTRAGRAM STYLES */
 
-#instagram {
+#instagram, #instagram-blm {
   max-width: 320px;
   max-height: 450px;
   overflow-y: auto;
@@ -144,7 +144,7 @@ button {
   border-bottom: 1px solid black;
 }
 
-#instagram {
+#instagram, #instagram-blm, #twitter-blm{
   margin-bottom: 25px;
 }
 
@@ -221,6 +221,19 @@ button {
 
 /*TWITTER*/
 #twitter {
+  max-width: 320px;
+  max-height: 408px;
+  overflow-y: auto;
+  overflow-x: none;
+  margin: 0 auto;
+  display: block;
+  border-right: 1px solid #CCD6DD;
+  border-left: 1px solid #CCD6DD;
+  border-bottom: 1px solid #CCD6DD;
+  border-top: none;
+}
+
+#twitter-blm {
   max-width: 320px;
   max-height: 408px;
   overflow-y: auto;
